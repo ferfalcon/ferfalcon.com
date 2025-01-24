@@ -1,0 +1,100 @@
+html {
+	--brand-color-300: #1181f2;
+	--brand-color-500: #0a66c2;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+}
+
+body {
+	font-family: "Lexend", sans-serif;
+	display: grid;
+	grid-template-columns: 
+		minmax(0, auto) 
+		minmax(0, 1rem)
+		minmax(min-content, max(48rem)) 
+		minmax(0, 1rem) 
+		minmax(0, auto);
+		align-content: center;
+		margin: 0;
+		min-height: 100svh;
+		scrollbar-gutter: stable;
+
+	color: whitesmoke;
+	background: #141414;
+}
+
+main {
+	display: grid;
+	gap: 1rem;
+	grid-column: 3;
+
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 500;
+	margin: 0;
+	margin-block: 0 .25rem;
+
+	span {
+		color: var(--brand-color-300);
+	}
+}
+	
+h2 {
+	font-size: 1.25rem;
+	font-weight: 200;
+	margin-block: 0 2.5rem;
+	line-height: 1.75;
+	
+	span {
+		font-weight: 500;
+	}
+}
+
+h3 {
+	font-weight: 400;
+	margin: 0;
+}
+
+a {
+	color: white;
+	background: #212121;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	width: fit-content;
+	text-decoration: none;
+	transition: background 0.3s;
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+}
+
+a:hover {
+	background: #393939;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-block-end: 1rem;
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
