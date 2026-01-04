@@ -2,7 +2,7 @@
 
 ## Software developer and web designer
 
-Creative <span>Web and Graphic Designer with over 15 years of experience</span> in user interface design, web development, and graphic design. Proven expertise in leading design projects, crafting user-friendly interfaces, and developing responsive website designs. Adept at CSS architecture, and animated web content with extensive certification in modern web technologies.
+Creative Web Developer and Graphic Designer with over 15 years of experience in user interface design, web development, and graphic design. Proven expertise crafting user-friendly interfaces, and developing responsive website designs.
 
 - [ferfalcon.com](https://ferfalcon.com)
 - [linkedin.com/in/fernandofalcon](https://linkedin.com/in/fernandofalcon)
@@ -28,7 +28,7 @@ AgileWorks provides e-commerce solutions using nopCommerce. The company speciali
 
 March 2013 . February 2016 . Montevideo . Uruguay
 
-Wintrillions is a global online lottery and gaming company. The company provides a platform for users to participate in international lottery games, ensuring seamless participation in lotteries from around the world.
+Wintrillions is a global online lottery and gaming company. The company provides a platform for users to participate in international lottery games, ensuring seamless participation in lotteries from  around the world.
 - Designed engaging and visually appealing landing pages and email marketing campaigns that signiﬁcantly increased customer engagement.
 - Created comprehensive social media graphics and web ad banners to boost brand visibility and online presence.
 - Developed brochures and advertising materials for print and digital media, tailoring designs to market needs and brand guidelines.
@@ -60,7 +60,7 @@ Prometeo Design is a freelance web and graphic design service. The company provi
 - Delivered custom web and graphic design solutions for various clients, managing projects from concept through completion.
 
 #### Gproxy
-**Freelance Web/Graphic Designer**
+**Web Designer**
 
 January 2004 . April 2006 . Miami . USA
 
@@ -72,12 +72,12 @@ Gproxy is a technology company that specializes in e-commerce solutions using th
 #### Foundations in Computer Science
 Holberton School . 2025
 
-#### Technical Degree in Web Design
+#### Technician in Graphic Design
 Ort University . 2009
 
 ### Languages
 
-#### **English** . Fluent - B2 Level
+#### **English** . Fluent . B2 Level
 
 #### **Spanish** . Native
 
@@ -110,7 +110,7 @@ Ort University . 2009
 - ClickUp
 - Asana
 
-### Udemy certifications
+### Certifications
 - [Interactive Web Animation [ JavaScript SVG CSS & Canvas ]](https://www.udemy.com/certificate/UC-b5e43c89-5957-4723-aa80-61bf29e81f9f/)
 - [Creative Web Animation with GSAP 3 [ JavaScript SVG CSS ]](https://www.udemy.com/certificate/UC-9ffb136c-2c59-4227-868c-196d622a99a1/)
 - [JavaScript Animations with GreenSock (GSAP)](https://www.udemy.com/certificate/UC-22c27520-a9fd-4d3a-9be7-0a05f6c2c5c4/)
@@ -121,3 +121,4 @@ Ort University . 2009
 - [Become a WordPress Developer: Unlocking Power With Code](https://www.udemy.com/certificate/UC-c110fd74-f8a5-468b-858c-22fc6f3b2ea3/)
 - [Master JavaScript Animations with Greensock](https://www.udemy.com/certificate/UC-7b0bc2c0-2567-4463-9351-1ea3787642c8/)
 - [Web APIs JavaScript Fetch getting JSON data Fun with APIs](https://www.udemy.com/certificate/UC-bc6df9d6-10d0-41ea-8ca5-6cf6b7848671/)
+- [Lean y Kanban en acción](https://s3.amazonaws.com/Keventer/certificates/353AF7AEF523A08B81C4p26602-A4.pdf)
