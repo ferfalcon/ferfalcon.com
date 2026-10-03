@@ -1,38 +1,104 @@
 ---
+import Arrow from './Arrow.astro';
+const experience = [
+  { company: 'AgileCommerce', role: 'Web Designer · Technical Leader', dates: '2016 — 2024', description: 'E-commerce interfaces, responsive websites, and scalable CSS architecture.' },
+  { company: 'WinTrillions / Trillonario', role: 'Web & Graphic Designer', dates: '2013 — 2016', description: 'Landing pages, email campaigns, and design for digital and print.' },
+  { company: 'INES CRM', role: 'Web & Graphic Designer', dates: '2011 — 2013', description: 'Web application interfaces, CSS frameworks, and marketing design.' },
+];
+const profiles = [
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/fernandofalcon/' },
+  { label: 'Behance', url: 'https://www.behance.net/ferfalcon' },
+  { label: 'GitHub', url: 'https://github.com/ferfalcon' },
+  { label: 'Frontend Mentor', url: 'https://www.frontendmentor.io/profile/ferfalcon' },
+];
 ---
-
-<main>
-    <h1>Hi, I'm <span>Fernando Falcon</span></h1>
-    <h2>
-        Creative <span>Web and Graphic Designer with over 15 years of experience</span> in user interface design, web development, and graphic design. Proven expertise in leading design projects, crafting user-friendly interfaces, and developing responsive website designs. Adept at CSS architecture, and animated web content with extensive certification in modern web technologies
-    </h2>
-    <h3>Reach out</h3>
-    <nav>
-        <a href="https://www.linkedin.com/in/fernandofalcon/">
-            <img src="/images/linkedin.svg" alt="LinkedIn">
-            LinkedIn
-        </a>
-        <a href="https://www.behance.net/ferfalcon">
-            <img src="/images/behance.svg" alt="Behance logo">
-            Behance
-        </a>
-        <a href="https://github.com/ferfalcon">
-            <img src="/images/github.svg" alt="GitHub logo">
-            GitHub
-        </a>
-        <a href="https://www.frontendmentor.io/profile/ferfalcon">
-            <img src="/images/frontendmentor.svg" alt="Frontend Mentor logo">
-            Frontend Mentor
-        </a>
-    </nav>
-    <footer>
-        <a href="mailto:fer.falcon.dg@gmail.com">
-            <img src="/images/email.svg" alt="Email icon">
-            fer.falcon.dg@gmail.com
-        </a>
-        <a href="https://ferfalcon.com/fer-falcon-resume.pdf">
-            <img src="/images/pdf.svg" alt="PDF file icon">
-            Download resume
-        </a>
-    </footer>
-</main>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="opening" id="top">
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Fernando Falcon, home">ferfalcon<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a class="nav-contact" href="#contact">Let’s talk <Arrow /></a></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <h1>Designed well.<br />Built right.</h1>
+        <p class="intro">I’m Fernando Falcon, a <strong>web designer & developer</strong> in Montevideo. I bring a designer’s eye and a developer’s mindset to the web.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <Arrow direction="down" /></a><a class="text-link" href="mailto:fer.falcon.dg@gmail.com">Get in touch <Arrow /></a></div>
+      </div>
+      <div class="type-specimen">
+        <div class="specimen-top"><span>Design meets code</span><span class="specimen-swatch" aria-hidden="true"></span></div>
+        <div class="specimen-letter" aria-hidden="true">Ff<span>.</span></div>
+        <div class="specimen-controls" hidden>
+          <div class="specimen-label"><label for="type-weight">Make your mark</label><output for="type-weight" id="weight-value">700</output></div>
+          <input type="range" min="100" max="900" value="700" step="10" id="type-weight" aria-describedby="specimen-hint" />
+          <p id="specimen-hint">A little type play. Slide to change the weight.</p>
+        </div>
+        <noscript><p class="specimen-static">Graphic sensibility. Built for the browser.</p></noscript>
+      </div>
+      <div class="hero-baseline"><p>Thoughtful interfaces. Responsive websites. Visual identities.</p><span>Based in Uruguay</span></div>
+    </section>
+    <div class="page-body">
+      <section class="work-section wrap section-space" id="work">
+        <div class="section-heading"><h2>From the<br />design desk.</h2><p>A selection from my portfolio.<br />Visual systems and interfaces, down to the details.</p></div>
+        <div class="work-grid">
+          <article class="project project-campo">
+            <a class="project-visual campo-visual" href="/images/work/del-campo-system.webp" aria-label="View Del Campo Stores design system image">
+              <img src="/images/work/del-campo-system.webp" alt="Del Campo Stores design board with its logo, warm color palette, typography, and interface components" width="1440" height="1024" loading="lazy" decoding="async" />
+              <span class="image-action" aria-hidden="true"><Arrow /></span>
+            </a>
+            <div class="project-info"><h3>Del Campo Stores</h3><p>Visual system · Interface design</p></div>
+          </article>
+          <article class="project project-elio">
+            <a class="project-visual elio-visual" href="/images/work/elio-form.webp" aria-label="View Elio interface image">
+              <img class="elio-screen elio-screen-front" src="/images/work/elio-form.webp" alt="Elio mobile interface with an aqua color palette, labeled inputs, and symptom selection" width="800" height="1972" loading="lazy" decoding="async" />
+              <img class="elio-screen elio-screen-back" src="/images/work/elio-results.webp" alt="" width="800" height="2320" loading="lazy" decoding="async" />
+              <span class="image-action" aria-hidden="true"><Arrow /></span>
+            </a>
+            <div class="project-info"><h3>Elio</h3><p>Mobile interface · UI design</p></div>
+          </article>
+        </div>
+        <div class="work-footer"><p>More design on Behance. More code on GitHub.</p><div><a class="text-link" href="https://www.behance.net/ferfalcon">Behance <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon">GitHub <Arrow /></a></div></div>
+      </section>
+      <section class="about-section" id="about">
+        <div class="wrap about-grid section-space">
+          <div class="about-heading"><h2>A designer<br />who builds.</h2><a class="text-link" href="/fer-falcon-resume.pdf" download>Download resume <Arrow direction="down" /></a></div>
+          <div class="about-copy">
+            <p class="about-lead">Good ideas deserve to work beautifully.</p>
+            <p>I’m Fernando, a web and graphic designer with over 15 years of experience across interface design, web development, and visual communication.</p>
+            <p>My work connects the visual details with the way a website is built: clear interfaces, responsive layouts, and CSS that holds up as a project grows.</p>
+            <dl class="capabilities"><div><dt>Design</dt><dd>UI design, visual systems, graphic design, Figma</dd></div><div><dt>Development</dt><dd>HTML, CSS, JavaScript, TypeScript, React</dd></div><div><dt>Perspective</dt><dd>E-commerce, design leadership, cross-functional collaboration</dd></div></dl>
+          </div>
+        </div>
+      </section>
+      <section class="experience-section wrap section-space">
+        <div class="section-heading"><h2>Experience<br />in practice.</h2><p>Design, development, and the space between.<br />Selected roles from my professional journey.</p></div>
+        <ul class="experience-list" role="list">{experience.map((item) => <li><div><h3>{item.company}</h3><p>{item.role}</p></div><p class="experience-description">{item.description}</p><span class="experience-dates">{item.dates}</span></li>)}</ul>
+        <a class="text-link experience-resume" href="/fer-falcon-resume.pdf" download>See the full story in my resume <Arrow direction="down" /></a>
+      </section>
+      <section class="contact-section" id="contact">
+        <div class="wrap contact-inner">
+          <h2>Something in mind?<br /><a href="mailto:fer.falcon.dg@gmail.com">Let’s make it real.<Arrow /></a></h2>
+          <div class="contact-bottom"><p>A project, a role, or a good conversation.<br />I’d love to hear about it.</p><a class="email-link" href="mailto:fer.falcon.dg@gmail.com">fer.falcon.dg@gmail.com</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="site-footer wrap">
+  <a class="wordmark" href="#top" aria-label="Fernando Falcon, back to top">ferfalcon<span aria-hidden="true">.</span></a>
+  <nav aria-label="Find me online">{profiles.map((profile) => <a href={profile.url}>{profile.label}<Arrow /></a>)}</nav>
+  <p>Montevideo, Uruguay</p>
+</footer>
+<script>
+  const slider = document.querySelector<HTMLInputElement>('#type-weight');
+  const specimen = document.querySelector<HTMLElement>('.specimen-letter');
+  const output = document.querySelector<HTMLOutputElement>('#weight-value');
+  const controls = document.querySelector<HTMLElement>('.specimen-controls');
+  if (slider && specimen && output && controls) {
+    controls.hidden = false;
+    slider.addEventListener('input', () => {
+      specimen.style.fontWeight = slider.value;
+      output.value = slider.value;
+    });
+  }
+</script>
