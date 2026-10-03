@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Arrow from '../../components/Arrow.astro';
+const description = 'Elio: a guided clinical documentation workflow. Product design and Angular frontend implementation by Fernando Falcon.';
+const stages = [
+  { title: 'Start', text: 'Enter minimal clinical context, such as age, sex, and the chief complaint.' },
+  { title: 'Sections', text: 'Capture relevant facts and generate a draft for each clinical section.' },
+  { title: 'Review', text: 'Edit the generated text and confirm what belongs in the note.' },
+  { title: 'Finalize', text: 'Assemble the sections into a complete, editable clinical note.' },
+  { title: 'Export', text: 'Copy or export the note for use in an existing clinical system.' },
+];
+---
+<Layout title="Elio — Clinical documentation case study | Fernando Falcon" description={description} ogDescription={description}>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="opening" id="top"><SiteHeader /></div>
+  <main id="main" class="case-study" tabindex="-1">
+    <div class="opening">
+      <section class="case-hero wrap" aria-labelledby="elio-title">
+        <div class="case-hero-copy">
+          <a class="text-link case-back" href="/#work"><Arrow direction="down" /> Back to work</a>
+          <h1 id="elio-title">Elio<span class="case-title-detail">Designing a guided workflow for clinical notes.</span></h1>
+          <p class="intro">AI-assisted drafting, with clinicians in control. A focused workspace for turning consultation details into structured, editable notes.</p>
+          <p class="case-role">My role: <strong>Product design &amp; frontend implementation</strong></p>
+          <a class="text-link" href="#overview">The project at a glance <Arrow direction="down" /></a>
+        </div>
+        <figure class="case-hero-figure">
+          <div class="case-hero-stage">
+            <img src="/images/work/elio-form.webp" alt="Elio clinical intake screen with age, sex, consultation details, and expandable allergy choices" width="800" height="1972" fetchpriority="high" />
+          </div>
+          <figcaption>Clinical intake interface. Spanish-language product UI with fictional patient examples. <a href="/images/work/elio-form.webp">View full-size intake screen</a></figcaption>
+        </figure>
+      </section>
+    </div>
+    <section class="wrap section-space case-overview" id="overview" aria-labelledby="overview-title">
+      <div class="case-section-heading"><h2 id="overview-title">The project<br />at a glance.</h2><p>I owned Elio’s design and frontend implementation, connecting the structure of the workflow with the interface clinicians use to move through it.</p></div>
+      <dl class="case-facts">
+        <div><dt>Product</dt><dd>Clinical documentation MVP</dd></div>
+        <div><dt>Users</dt><dd>Clinicians in clinic or field settings</dd></div>
+        <div><dt>My contribution</dt><dd>Product design and frontend implementation</dd></div>
+        <div><dt>Tools</dt><dd>Figma and Angular</dd></div>
+      </dl>
+      <div class="case-summary">
+        <div><h3>The problem</h3><p>Documentation under time pressure, with information spread across templates and systems. AI drafting added another need: a clear way to inspect and edit its output.</p></div>
+        <div><h3>The response</h3><p>A section-by-section note builder. Capture the facts, generate a draft, review the text, and confirm what belongs in the final note.</p></div>
+        <div><h3>The delivered work</h3><p>Design and frontend implementation of the guided workflow, from initial context through review and final-note handoff.</p></div>
+      </div>
+    </section>
+    <section class="case-tonal" aria-labelledby="workflow-title">
+      <div class="wrap section-space">
+        <div class="case-section-heading"><h2 id="workflow-title">Make the<br />next step clear.</h2><div class="case-prose"><p>Clinicians already know what they need to document. The interface supports that expertise by giving the work a predictable structure.</p><p>Short sessions, interruptions, and tablet use shaped the brief. Rather than one large editor, Elio divides the note into familiar clinical sections with a defined task at each stage.</p></div></div>
+        <ol class="case-flow" role="list">{stages.map((stage) => <li><h3>{stage.title}</h3><p>{stage.text}</p></li>)}</ol>
+        <div class="case-pattern"><p>Within each section</p><p>Capture <span aria-hidden="true">→</span> Draft <span aria-hidden="true">→</span> Review <span aria-hidden="true">→</span> Confirm</p></div>
+      </div>
+    </section>
+    <section class="wrap section-space case-review" aria-labelledby="review-title">
+      <figure class="case-result-figure">
+        <div class="case-result-stage"><img src="/images/work/elio-results.webp" alt="Elio results screen with separate clinical note sections, editing controls, and save and restart actions" width="800" height="2320" loading="lazy" decoding="async" /></div>
+        <figcaption>Sectioned note output with editing controls. Fictional clinical examples and template placeholders. <a href="/images/work/elio-results.webp">View full-size results screen</a></figcaption>
+      </figure>
+      <div class="case-decisions">
+        <h2 id="review-title">A workflow<br />built around review.</h2>
+        <div class="case-decision"><h3>Keep input and draft distinct</h3><p>Clinician-entered facts and AI-generated prose have different roles. The workflow separates capture from drafting so clinicians can inspect what the system produces before confirming it.</p></div>
+        <div class="case-decision"><h3>Keep each step focused</h3><p>Progressive disclosure gives each screen a narrower purpose. The repeated interaction pattern helps clinicians track what they entered, what was drafted, and what still needs review.</p></div>
+        <div class="case-decision"><h3>Keep the clinician in control</h3><p>Review is an explicit step, and the final note remains editable. The clinician decides what to include rather than treating generated text as a finished record.</p></div>
+        <div class="case-decision"><h3>Fit existing workflows</h3><p>Copy and export provide a handoff to existing clinical systems. This gives the MVP a clear endpoint without requiring deep electronic health record integration.</p></div>
+      </div>
+    </section>
+    <section class="case-tonal" aria-labelledby="implementation-title">
+      <div class="wrap section-space case-section-heading case-implementation">
+        <h2 id="implementation-title">From interface<br />to frontend.</h2>
+        <div class="case-prose"><p>I carried the workflow from design into frontend implementation. My contribution covered both how clinicians move through the task and the interface supporting that sequence.</p><p>Figma supported the design work; the frontend used Angular. The broader project used Fastify and TypeScript on the backend.</p><p>The interface brings clinical information into discrete sections, with editing actions beside the text they affect. The supplied screens show the intake structure and sectioned note output.</p><a class="text-link" href="https://github.com/feratholberton/ProyectoFinal">Explore the project repository <Arrow /></a></div>
+      </div>
+    </section>
+    <section class="wrap section-space case-section-heading" aria-labelledby="outcome-title">
+      <h2 id="outcome-title">Delivered work.<br />Next questions.</h2>
+      <div class="case-prose"><p>Elio brought together a guided clinical-note workflow, repeatable interface patterns, and frontend implementation. The design gives capture, drafting, and review their own place in the process.</p><p>The next validation step is 5–8 sessions with clinicians using realistic scenarios, tracking time to first draft, edit rate, completion, and confidence. These are proposed sessions; measured time savings, clinical accuracy, and adoption have not been established.</p><p>Minimal patient context and avoiding direct identifiers were design constraints. The project is presented here as design and implementation work, without a claim of clinical safety or privacy certification.</p></div>
+    </section>
+    <section class="contact-section" aria-labelledby="case-contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="case-contact-title">Design through implementation.<br /><a href="mailto:fer.falcon.dg@gmail.com">Let’s talk.<Arrow /></a></h2>
+        <div class="case-closing-links"><a class="text-link" href="/#work">Back to selected work <Arrow /></a><a class="text-link" href="/fer-falcon-resume.pdf" download>Download resume <Arrow direction="down" /></a></div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</Layout>

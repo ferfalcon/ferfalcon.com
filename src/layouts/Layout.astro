@@ -1,5 +1,11 @@
 ---
 import '../../src/styles/styles.css'
+interface Props { title?: string; description?: string; ogDescription?: string }
+const {
+    title = 'Fernando Falcon — Web Designer & Developer',
+    description = 'Fernando Falcon — web designer and developer in Montevideo, Uruguay. Interface design, responsive websites, and graphic design with over 15 years of experience.',
+    ogDescription = 'A designer’s eye. A developer’s mindset. Explore Fernando Falcon’s design work and experience.',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -10,12 +16,12 @@ import '../../src/styles/styles.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
         <link rel="preload" href="/fonts/archivo-variable.ttf" as="font" type="font/ttf" crossorigin />
-        <meta name="description" content="Fernando Falcon — web designer and developer in Montevideo, Uruguay. Interface design, responsive websites, and graphic design with over 15 years of experience." />
+        <meta name="description" content={description} />
         <meta name="theme-color" content="#ded0f5" />
-        <meta property="og:title" content="Fernando Falcon — Web Designer & Developer" />
-        <meta property="og:description" content="A designer’s eye. A developer’s mindset. Explore Fernando Falcon’s design work and experience." />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={ogDescription} />
         <meta property="og:type" content="website" />
-		<title>Fernando Falcon — Web Designer & Developer</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />

@@ -1,0 +1,14 @@
+---
+import Arrow from './Arrow.astro';
+const profiles = [
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/fernandofalcon/' },
+  { label: 'Behance', url: 'https://www.behance.net/ferfalcon' },
+  { label: 'GitHub', url: 'https://github.com/ferfalcon' },
+  { label: 'Frontend Mentor', url: 'https://www.frontendmentor.io/profile/ferfalcon' },
+];
+---
+<footer class="site-footer wrap">
+  <a class="wordmark" href="#top" aria-label="Fernando Falcon, back to top">ferfalcon<span aria-hidden="true">.</span></a>
+  <nav aria-label="Find me online">{profiles.map((profile) => <a href={profile.url}>{profile.label}<Arrow /></a>)}</nav>
+  <p>Montevideo, Uruguay</p>
+</footer>
