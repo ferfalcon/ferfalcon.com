@@ -73,6 +73,9 @@ section[id], main { scroll-margin-block-start: 2rem; }
   --blueprint-rule: rgb(219 234 254 / 32%);
   --blueprint-major: rgb(219 234 254 / 13%);
   background: #073b75;
+  background-image: var(--blueprint-pattern);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: center top;
   color: var(--color-inverse-text);
   color-scheme: dark;
 }
@@ -90,6 +93,7 @@ section[id], main { scroll-margin-block-start: 2rem; }
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: center bottom;
 }
+.opening-home .site-header { background-image: none; }
 .opening .site-header::before, .opening .site-header::after {
   content: '';
   position: absolute;
