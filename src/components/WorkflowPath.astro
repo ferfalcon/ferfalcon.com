@@ -1,0 +1,11 @@
+---
+const stages = [
+  { title: 'Source', detail: 'Design intent & missing states' },
+  { title: 'Plan', detail: 'Requirements & decisions' },
+  { title: 'Code', detail: 'Implementation & checks' },
+  { title: 'Review', detail: 'Evidence & human acceptance' },
+];
+---
+<ol class="workflow-path" aria-label="Design-to-code workflow">
+  {stages.map((stage) => <li><strong>{stage.title}</strong><span>{stage.detail}</span></li>)}
+</ol>

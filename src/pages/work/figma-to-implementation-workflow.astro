@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Arrow from '../../components/Arrow.astro';
+import WorkflowPath from '../../components/WorkflowPath.astro';
+const description = 'Figma to Implementation: a workflow connecting design intent, implementation decisions, code, and review, with evidence-backed frontend examples.';
+const repository = 'https://github.com/ferfalcon/figma-to-implementation-workflow';
+---
+<Layout title="Figma to Implementation — Workflow | Fernando Falcon" description={description} ogDescription={description}>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="opening" id="top"><SiteHeader /></div>
+  <main id="main" tabindex="-1" class="workflow-page">
+    <section class="workflow-opening" aria-labelledby="workflow-page-title">
+      <div class="wrap section-space">
+        <a class="text-link case-back" href="/#workflow"><Arrow direction="down" /> Back to the workflow</a>
+        <div class="workflow-opening-grid">
+          <h1 id="workflow-page-title">From design intent to reviewed code.</h1>
+          <div class="workflow-opening-copy"><p class="workflow-lead">Figma to Implementation</p><p>Turning a Figma screen into frontend code takes more than matching its appearance. Responsive behavior, interaction states, accessibility, and implementation constraints need decisions of their own.</p><p>This workflow connects those decisions to their sources, then carries them through planning, implementation, checks, and human review.</p><div class="workflow-actions"><a class="button button-dark" href={repository}>View the workflow on GitHub <Arrow /></a><a class="text-link" href="#use-cases">See the use cases <Arrow direction="down" /></a></div></div>
+        </div>
+        <WorkflowPath />
+      </div>
+    </section>
+    <section class="wrap section-space case-section-heading" aria-labelledby="process-title">
+      <h2 id="process-title">Why a workflow,<br />not just a prompt?</h2>
+      <div class="case-prose"><p>A design shows an intended interface. It does not, by itself, establish how that interface works with a keyboard, responds between the supplied screen widths, handles errors, or fits an existing codebase.</p><p>The workflow separates what the source demonstrates, what needs a decision, and what must be checked in the browser.</p><dl class="workflow-principles"><div><dt>Inspect the source</dt><dd>Define the design scope, record its version or inspection date, and identify missing states and responsive behavior.</dd></div><div><dt>Make the result testable</dt><dd>Connect requirements and design intent to a repository-aware implementation plan. Keep documentation proportional to the work.</dd></div><div><dt>Implement and review</dt><dd>Track the resulting code, record which checks actually ran, and keep unresolved findings visible.</dd></div></dl></div>
+    </section>
+    <section class="case-tonal" id="use-cases" aria-labelledby="use-cases-title">
+      <div class="wrap section-space">
+        <div class="case-section-heading"><h2 id="use-cases-title">Three projects.<br />Different outcomes.</h2><p class="case-prose">A historically accepted implementation, a review that identified a blocking issue, and a WordPress implementation proposed for further workflow validation. Each result links to its evidence.</p></div>
+        <article class="workflow-example" aria-labelledby="myteam-title">
+          <div class="workflow-example-index"><h3 id="myteam-title">myteam</h3><p>Astro · TypeScript</p><span class="workflow-status">Historical recorded acceptance</span></div>
+          <div class="case-prose"><h4>Shared design. Shared behavior.</h4><p>A supplied three-page design with shared navigation, expandable director profiles, and a contact form. ChatGPT supported planning and documentation; Codex supported implementation.</p><p>Browser review exposed Contact text contrast, a cascade-layer problem that hid the submit label, and spacing differences. The recorded implementation corrected and retested those findings.</p><p>The final review records <strong>137 passing browser assertions and no recorded failures</strong> across routes, responsive layouts, keyboard and focus behavior, navigation, disclosures, and validation. The form validates locally; sending messages was outside scope.</p><p class="workflow-qualification">Acceptance applies to the historical reviewed output. A later heading-layout change is outside the same evidence. Dedicated screen-reader testing and formal accessibility conformance are not claimed.</p><div class="workflow-evidence-links"><a class="text-link" href="https://github.com/ferfalcon/myteam-multi-page-website/blob/7767471e07842ad755161a1765f18d61db02d1c8/docs/implementation/IMPLEMENTATION-REVIEW.md">Read the final review <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon/myteam-multi-page-website/tree/7f981670dd338a0178bbc070943334d79ca6af38">Reviewed implementation <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon/myteam-multi-page-website/blob/7767471e07842ad755161a1765f18d61db02d1c8/docs/implementation/evidence/README.md">Validation evidence <Arrow /></a></div></div>
+        </article>
+        <article class="workflow-example" aria-labelledby="book-title">
+          <div class="workflow-example-index"><h3 id="book-title">Tech Book Club</h3><p>Astro · Responsive landing page</p><span class="workflow-status">Corrections required</span></div>
+          <div class="case-prose"><h4>Matching the design is not enough.</h4><p>The landing page preserves the supplied design’s structure, typography, imagery, and responsive compositions. Build and responsive checks passed, but the final review found a problem in the hero heading.</p><p>Its gradient followed the design while starting at approximately <strong>1.82:1 contrast</strong> against the background, below the review’s selected 3:1 threshold for large text. That finding remained open.</p><p class="workflow-qualification">The recorded workflow is blocked, even though the page was deployed and its implementation pull request merged. Adjusting the heading and rerunning the relevant checks remain the next steps before final acceptance.</p><div class="workflow-evidence-links"><a class="text-link" href="https://github.com/ferfalcon/tech-book-club-landing-page/blob/292f3abf45fc31ada8be1773fa66a9533edd9f23/IMPLEMENTATION-REVIEW.md">Inspect the finding <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon/tech-book-club-landing-page/pull/13">Implementation pull request <Arrow /></a></div></div>
+        </article>
+        <article class="workflow-example" aria-labelledby="insure-title">
+          <div class="workflow-example-index"><h3 id="insure-title">Insure</h3><p>WordPress · PHP · Block theme</p><span class="workflow-status">Workflow validation pending</span></div>
+          <div class="case-prose"><h4>Carry the process into WordPress.</h4><p>Insure translates a supplied landing-page design into a WordPress block theme: theme settings, block templates, reusable PHP patterns, frontend styles, and editor-style integration.</p><p>A WordPress result needs its templates, patterns, settings, and editing behavior to work together. Site Editor overrides and database-managed content can change the rendered result without changing the theme files.</p><p class="workflow-qualification">The implementation was verified in the vault’s evidence review. It is a proposed WordPress validation candidate; use of this specific workflow and final acceptance have not yet been established.</p><p>A further validation pass would connect an authorized design scope to a specific theme output and the actual WordPress runtime, checking responsive behavior, keyboard access, contrast, and editing behavior.</p><div class="workflow-evidence-links"><a class="text-link" href="https://github.com/ferfalcon/insure-landing-page/tree/82b3e9d145cd7d8705604a0e4815c7475e1597b0">Explore the theme <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon/insure-landing-page/blob/82b3e9d145cd7d8705604a0e4815c7475e1597b0/README.md">Project process &amp; credits <Arrow /></a></div></div>
+        </article>
+      </div>
+    </section>
+    <section class="wrap section-space case-section-heading" aria-labelledby="evidence-title"><h2 id="evidence-title">An inspectable<br />result.</h2><div class="case-prose"><p>The value of the workflow is that the result can be inspected: which source was used, what was implemented, what was checked, and what still needs work.</p><p>The toolkit’s separate real-user product acceptance remains pending. These historical and candidate examples do not establish acceptance of its current fully-online ChatGPT experience.</p><p class="workflow-qualification">The featured projects use supplied Frontend Mentor challenge designs and assets. They are implementation exercises, with original visual-design credit belonging to the supplied designs.</p><a class="text-link" href={repository}>Explore the workflow documentation <Arrow /></a></div></section>
+    <section class="contact-section" aria-labelledby="workflow-contact-title"><div class="wrap contact-inner"><h2 id="workflow-contact-title">Design through implementation.<br /><a href="mailto:fer.falcon.dg@gmail.com">Let’s talk.<Arrow /></a></h2><div class="case-closing-links"><a class="text-link" href="/#work">Back to selected work <Arrow /></a><a class="text-link" href="/fer-falcon-resume.pdf" download>Download resume <Arrow direction="down" /></a></div></div></section>
+  </main>
+  <SiteFooter />
+</Layout>

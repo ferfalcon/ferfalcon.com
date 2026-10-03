@@ -1,10 +1,10 @@
 ---
 import Arrow from './Arrow.astro';
-interface Props { home?: boolean }
-const { home = false } = Astro.props;
+interface Props { home?: boolean; resume?: boolean }
+const { home = false, resume = false } = Astro.props;
 const base = home ? '' : '/';
 ---
 <header class="site-header wrap">
   <a class="wordmark" href={home ? '#top' : '/'} aria-label="Fernando Falcon, home">ferfalcon<span aria-hidden="true">.</span></a>
-  <nav aria-label="Main"><a href={`${base}#work`}>Work</a><a href={`${base}#about`}>About</a><a class="nav-contact" href={`${base}#contact`}>Let’s talk <Arrow /></a></nav>
+  <nav aria-label="Main"><a href={`${base}#work`}>Work</a><a href={`${base}#about`}>About</a><a href="/resume/" aria-current={resume ? 'page' : undefined}>Résumé</a><a class="nav-contact" href={`${base}#contact`}>Let’s talk <Arrow /></a></nav>
 </header>

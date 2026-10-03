@@ -2,6 +2,7 @@
 import Arrow from './Arrow.astro';
 import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
+import WorkflowPath from './WorkflowPath.astro';
 const experience = [
   { company: 'AgileCommerce', role: 'Web Designer · Technical Leader', dates: '2016 — 2024', description: 'E-commerce interfaces, responsive websites, and scalable CSS architecture.' },
   { company: 'WinTrillions / Trillonario', role: 'Web & Graphic Designer', dates: '2013 — 2016', description: 'Landing pages, email campaigns, and design for digital and print.' },
@@ -53,6 +54,16 @@ const experience = [
         </div>
         <div class="work-footer"><p>More design on Behance. More code on GitHub.</p><div><a class="text-link" href="https://www.behance.net/ferfalcon">Behance <Arrow /></a><a class="text-link" href="https://github.com/ferfalcon">GitHub <Arrow /></a></div></div>
       </section>
+      <section class="workflow-feature" id="workflow" aria-labelledby="workflow-title">
+        <div class="wrap section-space">
+          <div class="workflow-feature-heading">
+            <h2 id="workflow-title">Figma to<br />Implementation.</h2>
+            <div class="workflow-feature-copy"><p class="workflow-lead">A design is the starting point.<br />Reviewed code is the result.</p><p>An evidence-driven workflow connecting design sources, implementation decisions, code, and review. Real frontend projects show both completed work and unresolved findings.</p><a class="text-link" href="/work/figma-to-implementation-workflow/">Explore the workflow <Arrow /></a></div>
+          </div>
+          <WorkflowPath />
+          <div class="workflow-feature-footer"><p>Astro &amp; TypeScript examples · WordPress validation candidate</p><a class="text-link" href="https://github.com/ferfalcon/figma-to-implementation-workflow">View on GitHub <Arrow /></a></div>
+        </div>
+      </section>
       <section class="about-section" id="about">
         <div class="wrap about-grid section-space">
           <div class="about-heading"><h2>A designer<br />who builds.</h2><a class="text-link" href="/fer-falcon-resume.pdf" download>Download resume <Arrow direction="down" /></a></div>
@@ -67,7 +78,7 @@ const experience = [
       <section class="experience-section wrap section-space">
         <div class="section-heading"><h2>Experience<br />in practice.</h2><p>Design, development, and the space between.<br />Selected roles from my professional journey.</p></div>
         <ul class="experience-list" role="list">{experience.map((item) => <li><div><h3>{item.company}</h3><p>{item.role}</p></div><p class="experience-description">{item.description}</p><span class="experience-dates">{item.dates}</span></li>)}</ul>
-        <a class="text-link experience-resume" href="/fer-falcon-resume.pdf" download>See the full story in my resume <Arrow direction="down" /></a>
+        <a class="text-link experience-resume" href="/resume/">Explore my full résumé <Arrow /></a>
       </section>
       <section class="contact-section" id="contact">
         <div class="wrap contact-inner">
