@@ -2,13 +2,14 @@
 name: Fernando Falcon
 description: A typographic portfolio connecting graphic sensibility and frontend craft.
 colors:
-  ink: "#292134"
-  muted: "#655c70"
-  violet: "#ded0f5"
-  violet-deep: "#5c348a"
-  paper: "#faf9fc"
-  soft: "#efebf4"
-  line: "#d6d0de"
+  ink: "#182b3f"
+  muted: "#526477"
+  blue-soft: "#dbeafe"
+  accent: "#0a66c2"
+  accent-hover: "#084f97"
+  paper: "#fafcff"
+  soft: "#edf4fb"
+  line: "#cbd9e6"
 typography:
   display:
     fontFamily: "Archivo, sans-serif"
@@ -50,12 +51,12 @@ spacing:
   xl: "2.5rem"
 components:
   button-dark:
-    backgroundColor: "{colors.ink}"
+    backgroundColor: "{colors.accent}"
     textColor: "{colors.paper}"
     rounded: "{rounded.sm}"
     padding: "1rem 1.4rem"
   button-dark-hover:
-    backgroundColor: "{colors.violet-deep}"
+    backgroundColor: "{colors.accent-hover}"
   text-link:
     textColor: "inherit"
   navigation:
@@ -63,7 +64,7 @@ components:
   range:
     width: "100%"
   specimen:
-    backgroundColor: "#d1bbea"
+    backgroundColor: "#c2ddf5"
     textColor: "{colors.ink}"
     rounded: "{rounded.sm}"
     padding: "1.25rem 1.6rem 1.4rem"
@@ -83,34 +84,35 @@ components:
 
 **Creative North Star: "The Working Typographic Specimen"**
 
-Graphic sensibility and frontend craft share one visual language: oversized lettering, pale violet fields, open composition, and direct manipulation. The atmosphere is confident and approachable, with compact controls and quiet supporting text giving the display type room to work.
+Graphic sensibility and frontend craft share one visual language: oversized lettering, pale blue fields, open composition, and direct manipulation. The atmosphere is confident and approachable, with compact controls and quiet supporting text giving the display type room to work.
 
 Flat surfaces and carefully aligned rules organize the content. Actual portfolio imagery supplies the visual evidence; the interactive specimen makes the typography tangible without automatic movement. This system describes the implemented local redesign.
 
 **Key Characteristics:**
 - Large Archivo lettering paired with readable Hanken Grotesk.
-- Violet and ink identity with soft white reading surfaces.
+- Blue and ink identity with soft white reading surfaces.
 - Flat rectangular imagery and lightly rounded controls.
 - User-driven interaction and visible keyboard focus.
 
 ## Colors
 
-Pale violet is a substantial surface color, balanced by dark ink and nearly white content areas.
+Pale blue is a substantial surface color, balanced by dark ink and nearly white content areas.
 
 ### Primary
-- **Pale Violet** (`violet`): opening field, inverse contact text, and selection text.
-- **Deep Violet** (`violet-deep`): wordmark punctuation, specimen punctuation, button hover, and focus outlines on light surfaces.
+- **Pale Blue** (`blue-soft`): opening field, inverse contact text, and selection text.
+- **Primary Blue** (`accent`): the user-selected `#0a66c2`, used for primary actions, range controls, wordmark/specimen punctuation, and focus outlines on light surfaces.
+- **Deep Blue** (`accent-hover`): primary action hover, preserving light-text contrast.
 
 ### Neutral
-- **Plum Ink** (`ink`): primary text, filled actions, range accent, and inverse contact surface.
-- **Muted Plum** (`muted`): supporting descriptions and secondary metadata.
+- **Slate Ink** (`ink`): primary text and inverse contact surface.
+- **Muted Slate** (`muted`): supporting descriptions and secondary metadata.
 - **Soft Paper** (`paper`): main reading surface and light text on filled actions.
-- **Lavender Mist** (`soft`): a tonal section background.
+- **Blue Mist** (`soft`): a tonal section background.
 - **Quiet Rule** (`line`): dividers for repeated information and lists.
 
 Portfolio image stages use colors drawn from their individual projects. These are contextual presentation choices, not additional global brand accents.
 
-**The Surface Color Rule.** Use violet as a field and ink as a structural counterweight; preserve readable text contrast across both.
+**The Surface Color Rule.** Use pale blue as a field and ink as a structural counterweight; preserve readable text contrast across both.
 
 ## Typography
 
@@ -148,7 +150,7 @@ The base form is an open rectangle. Buttons, specimen panels, and image stages s
 
 ### Buttons and text links
 
-Filled actions use ink on paper contrast, a small radius, semibold body text, and an inline arrow. Their minimum height is `54px`; hover changes the fill to deep violet. Text links keep an open background and underline on hover, with a minimum height of `44px`. The common keyboard focus treatment is a `3px` deep-violet outline offset by `6px`; on the ink contact section it switches to pale violet.
+Filled actions use paper text on primary blue, a small radius, semibold body text, and an inline arrow. Their minimum height is `54px`; hover changes the fill to deep blue. Text links keep an open background and underline on hover, with a minimum height of `44px`. The common keyboard focus treatment is a `3px` primary-blue outline offset by `6px`; on the ink contact section it switches to pale blue.
 
 ### Navigation
 
@@ -160,7 +162,7 @@ Real project imagery occupies lightly rounded, flat color stages. Supporting tit
 
 ### Typographic specimen and range
 
-The specimen uses a deeper pale-violet panel, a thin border, and oversized Archivo letters. Container-relative type sizing (`82cqi`) fits the desktop panel; mobile uses `clamp(9rem, 48vw, 17rem)`. A native range changes the weight from `100` to `900` in steps of `10`, starting at `700`. The output remains numeric and stable in width.
+The specimen uses a deeper pale-blue panel, a thin border, and oversized Archivo letters. Container-relative type sizing (`82cqi`) fits the desktop panel; mobile uses `clamp(9rem, 48vw, 17rem)`. A native range changes the weight from `100` to `900` in steps of `10`, starting at `700`. The output remains numeric and stable in width.
 
 Controls are exposed only when the script is ready. The native range supports pointer and keyboard input, a visible label, a descriptive hint, and the shared focus outline. Without JavaScript, the specimen remains visible with static explanatory text. No motion runs automatically.
 

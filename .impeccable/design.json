@@ -1,105 +1,119 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-03T17:15:35.636825+00:00",
+  "generatedAt": "2026-10-03T18:10:00Z",
   "title": "Design System: Fernando Falcon",
   "extensions": {
     "colorMeta": {
       "ink": {
         "role": "neutral",
-        "displayName": "Plum Ink",
+        "displayName": "Slate Ink",
         "tonalRamp": [
-          "oklch(15.00% 0.03634 303.32)",
-          "oklch(26.43% 0.03634 303.32)",
-          "oklch(37.86% 0.03634 303.32)",
-          "oklch(49.29% 0.03634 303.32)",
-          "oklch(60.71% 0.03634 303.32)",
-          "oklch(72.14% 0.03634 303.32)",
-          "oklch(83.57% 0.03634 303.32)",
-          "oklch(95.00% 0.03634 303.32)"
+          "oklch(15.00% 0.01916 250.82)",
+          "oklch(26.43% 0.03375 250.82)",
+          "oklch(37.86% 0.04470 250.82)",
+          "oklch(49.29% 0.04470 250.82)",
+          "oklch(60.71% 0.04470 250.82)",
+          "oklch(72.14% 0.04470 250.82)",
+          "oklch(83.57% 0.02938 250.82)",
+          "oklch(95.00% 0.00894 250.82)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Muted Plum",
+        "displayName": "Muted Slate",
         "tonalRamp": [
-          "oklch(15.00% 0.03329 305.56)",
-          "oklch(26.43% 0.03329 305.56)",
-          "oklch(37.86% 0.03329 305.56)",
-          "oklch(49.29% 0.03329 305.56)",
-          "oklch(60.71% 0.03329 305.56)",
-          "oklch(72.14% 0.03329 305.56)",
-          "oklch(83.57% 0.03329 305.56)",
-          "oklch(95.00% 0.03329 305.56)"
+          "oklch(15.00% 0.01611 249.98)",
+          "oklch(26.43% 0.02838 249.98)",
+          "oklch(37.86% 0.03758 249.98)",
+          "oklch(49.29% 0.03758 249.98)",
+          "oklch(60.71% 0.03758 249.98)",
+          "oklch(72.14% 0.03758 249.98)",
+          "oklch(83.57% 0.02470 249.98)",
+          "oklch(95.00% 0.00752 249.98)"
         ]
       },
-      "violet": {
+      "blue-soft": {
         "role": "primary",
-        "displayName": "Pale Violet",
+        "displayName": "Pale Blue",
         "tonalRamp": [
-          "oklch(15.00% 0.05241 302.54)",
-          "oklch(26.43% 0.05241 302.54)",
-          "oklch(37.86% 0.05241 302.54)",
-          "oklch(49.29% 0.05241 302.54)",
-          "oklch(60.71% 0.05241 302.54)",
-          "oklch(72.14% 0.05241 302.54)",
-          "oklch(83.57% 0.05241 302.54)",
-          "oklch(95.00% 0.05241 302.54)"
+          "oklch(15.00% 0.01354 255.59)",
+          "oklch(26.43% 0.02386 255.59)",
+          "oklch(37.86% 0.03159 255.59)",
+          "oklch(49.29% 0.03159 255.59)",
+          "oklch(60.71% 0.03159 255.59)",
+          "oklch(72.14% 0.03159 255.59)",
+          "oklch(83.57% 0.02076 255.59)",
+          "oklch(95.00% 0.00632 255.59)"
         ]
       },
-      "violet-deep": {
+      "accent": {
         "role": "primary",
-        "displayName": "Deep Violet",
+        "displayName": "Primary Blue",
         "tonalRamp": [
-          "oklch(15.00% 0.13864 302.19)",
-          "oklch(26.43% 0.13864 302.19)",
-          "oklch(37.86% 0.13864 302.19)",
-          "oklch(49.29% 0.13864 302.19)",
-          "oklch(60.71% 0.13864 302.19)",
-          "oklch(72.14% 0.13864 302.19)",
-          "oklch(83.57% 0.13864 302.19)",
-          "oklch(95.00% 0.13864 302.19)"
+          "oklch(15.00% 0.06994 254.73)",
+          "oklch(26.43% 0.12324 254.73)",
+          "oklch(37.86% 0.16320 254.73)",
+          "oklch(49.29% 0.16320 254.73)",
+          "oklch(60.71% 0.16320 254.73)",
+          "oklch(72.14% 0.16320 254.73)",
+          "oklch(83.57% 0.10726 254.73)",
+          "oklch(95.00% 0.03264 254.73)"
         ]
       },
       "paper": {
         "role": "neutral",
         "displayName": "Soft Paper",
         "tonalRamp": [
-          "oklch(15.00% 0.00409 301.43)",
-          "oklch(26.43% 0.00409 301.43)",
-          "oklch(37.86% 0.00409 301.43)",
-          "oklch(49.29% 0.00409 301.43)",
-          "oklch(60.71% 0.00409 301.43)",
-          "oklch(72.14% 0.00409 301.43)",
-          "oklch(83.57% 0.00409 301.43)",
-          "oklch(95.00% 0.00409 301.43)"
+          "oklch(15.00% 0.00194 258.32)",
+          "oklch(26.43% 0.00341 258.32)",
+          "oklch(37.86% 0.00452 258.32)",
+          "oklch(49.29% 0.00452 258.32)",
+          "oklch(60.71% 0.00452 258.32)",
+          "oklch(72.14% 0.00452 258.32)",
+          "oklch(83.57% 0.00297 258.32)",
+          "oklch(95.00% 0.00090 258.32)"
         ]
       },
       "soft": {
         "role": "neutral",
-        "displayName": "Lavender Mist",
+        "displayName": "Blue Mist",
         "tonalRamp": [
-          "oklch(15.00% 0.01270 306.03)",
-          "oklch(26.43% 0.01270 306.03)",
-          "oklch(37.86% 0.01270 306.03)",
-          "oklch(49.29% 0.01270 306.03)",
-          "oklch(60.71% 0.01270 306.03)",
-          "oklch(72.14% 0.01270 306.03)",
-          "oklch(83.57% 0.01270 306.03)",
-          "oklch(95.00% 0.01270 306.03)"
+          "oklch(15.00% 0.00515 247.95)",
+          "oklch(26.43% 0.00907 247.95)",
+          "oklch(37.86% 0.01201 247.95)",
+          "oklch(49.29% 0.01201 247.95)",
+          "oklch(60.71% 0.01201 247.95)",
+          "oklch(72.14% 0.01201 247.95)",
+          "oklch(83.57% 0.00789 247.95)",
+          "oklch(95.00% 0.00240 247.95)"
         ]
       },
       "line": {
         "role": "neutral",
         "displayName": "Quiet Rule",
         "tonalRamp": [
-          "oklch(15.00% 0.02012 305.23)",
-          "oklch(26.43% 0.02012 305.23)",
-          "oklch(37.86% 0.02012 305.23)",
-          "oklch(49.29% 0.02012 305.23)",
-          "oklch(60.71% 0.02012 305.23)",
-          "oklch(72.14% 0.02012 305.23)",
-          "oklch(83.57% 0.02012 305.23)",
-          "oklch(95.00% 0.02012 305.23)"
+          "oklch(15.00% 0.01007 246.07)",
+          "oklch(26.43% 0.01774 246.07)",
+          "oklch(37.86% 0.02349 246.07)",
+          "oklch(49.29% 0.02349 246.07)",
+          "oklch(60.71% 0.02349 246.07)",
+          "oklch(72.14% 0.02349 246.07)",
+          "oklch(83.57% 0.01544 246.07)",
+          "oklch(95.00% 0.00470 246.07)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Deep Blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.05746 254.54)",
+          "oklch(26.43% 0.10124 254.54)",
+          "oklch(37.86% 0.13407 254.54)",
+          "oklch(49.29% 0.13407 254.54)",
+          "oklch(60.71% 0.13407 254.54)",
+          "oklch(72.14% 0.13407 254.54)",
+          "oklch(83.57% 0.08811 254.54)",
+          "oklch(95.00% 0.02681 254.54)"
         ]
       }
     },
@@ -160,7 +174,7 @@
       "refersTo": "button-dark",
       "description": "Primary action with a directional arrow.",
       "html": "<a class=\"ds-button\" href=\"#work\">Explore my work <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
-      "css": ".ds-button{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:inline-flex;align-items:center;justify-content:space-between;gap:1.75rem;min-height:54px;padding:1rem 1.4rem;border-radius:4px;background:var(--color-ink,#292134);color:var(--color-paper,#faf9fc);font-weight:600;text-decoration:none;transition:background-color 180ms ease}.ds-button:hover{background:var(--color-violet-deep,#5c348a)}.ds-button:focus-visible{outline:3px solid var(--color-violet-deep,#5c348a);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+      "css": ".ds-button{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:inline-flex;align-items:center;justify-content:space-between;gap:1.75rem;min-height:54px;padding:1rem 1.4rem;border-radius:4px;background:var(--color-accent,#0a66c2);color:var(--color-paper,#fafcff);font-weight:600;text-decoration:none;transition:background-color 180ms ease}.ds-button:hover{background:var(--color-accent-hover,#084f97)}.ds-button:focus-visible{outline:3px solid var(--color-accent,#0a66c2);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
     },
     {
       "name": "Text action",
@@ -168,15 +182,15 @@
       "refersTo": "text-link",
       "description": "Open action used for contact, profiles, and resume links.",
       "html": "<a class=\"ds-link\" href=\"#contact\">Get in touch <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
-      "css": ".ds-link{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:inline-flex;align-items:center;gap:.7rem;min-height:44px;color:var(--color-ink,#292134);font-weight:600;text-decoration:none;text-underline-offset:.25em}.ds-link:hover{text-decoration:underline}.ds-link:focus-visible{outline:3px solid var(--color-violet-deep,#5c348a);outline-offset:6px}"
+      "css": ".ds-link{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:inline-flex;align-items:center;gap:.7rem;min-height:44px;color:var(--color-ink,#182b3f);font-weight:600;text-decoration:none;text-underline-offset:.25em}.ds-link:hover{text-decoration:underline}.ds-link:focus-visible{outline:3px solid var(--color-accent,#0a66c2);outline-offset:6px}"
     },
     {
       "name": "Main navigation",
       "kind": "nav",
       "refersTo": "navigation",
       "description": "Visible anchor navigation across desktop and mobile.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"#work\">Work</a><a href=\"#about\">About</a><a class=\"ds-contact\" href=\"#contact\">Let’s talk <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></nav>",
-      "css": ".ds-nav{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:flex;align-items:center;gap:clamp(1.3rem,3vw,3rem);color:var(--color-ink,#292134)}.ds-nav a{display:inline-flex;align-items:center;gap:.75rem;min-height:44px;color:inherit;font-weight:600;text-decoration:none;text-underline-offset:.25em}.ds-nav a:hover{text-decoration:underline}.ds-nav .ds-contact{border-bottom:1px solid currentColor}.ds-nav a:focus-visible{outline:3px solid var(--color-violet-deep,#5c348a);outline-offset:6px}@media(max-width:700px){.ds-nav{gap:1rem;font-size:.875rem}}"
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"#work\">Work</a><a href=\"#about\">About</a><a class=\"ds-contact\" href=\"#contact\">Let\u2019s talk <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></nav>",
+      "css": ".ds-nav{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;display:flex;align-items:center;gap:clamp(1.3rem,3vw,3rem);color:var(--color-ink,#182b3f)}.ds-nav a{display:inline-flex;align-items:center;gap:.75rem;min-height:44px;color:inherit;font-weight:600;text-decoration:none;text-underline-offset:.25em}.ds-nav a:hover{text-decoration:underline}.ds-nav .ds-contact{border-bottom:1px solid currentColor}.ds-nav a:focus-visible{outline:3px solid var(--color-accent,#0a66c2);outline-offset:6px}@media(max-width:700px){.ds-nav{gap:1rem;font-size:.875rem}}"
     },
     {
       "name": "Weight range",
@@ -184,7 +198,7 @@
       "refersTo": "range",
       "description": "Native range with label, numeric starting value, and keyboard support; specimen binding is supplied by the application.",
       "html": "<div class=\"ds-range\"><label for=\"ds-weight\">Make your mark</label><span>700</span><input id=\"ds-weight\" aria-describedby=\"ds-hint\" type=\"range\" min=\"100\" max=\"900\" step=\"10\" value=\"700\"><p id=\"ds-hint\">A little type play. Slide to change the weight.</p></div>",
-      "css": ".ds-range{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;color:var(--color-ink,#292134);display:grid;grid-template-columns:1fr auto;gap:.5rem;font-size:.875rem}.ds-range label,.ds-range span{font-weight:600}.ds-range span{font-variant-numeric:tabular-nums}.ds-range input{grid-column:1/-1;width:100%;min-height:44px;margin:0;accent-color:var(--color-ink,#292134);cursor:ew-resize}.ds-range p{grid-column:1/-1;margin:0;font-size:.8125rem}.ds-range input:focus-visible{outline:3px solid var(--color-violet-deep,#5c348a);outline-offset:6px}"
+      "css": ".ds-range{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;color:var(--color-ink,#182b3f);display:grid;grid-template-columns:1fr auto;gap:.5rem;font-size:.875rem}.ds-range label,.ds-range span{font-weight:600}.ds-range span{font-variant-numeric:tabular-nums}.ds-range input{grid-column:1/-1;width:100%;min-height:44px;margin:0;accent-color:var(--color-accent,#0a66c2);cursor:ew-resize}.ds-range p{grid-column:1/-1;margin:0;font-size:.8125rem}.ds-range input:focus-visible{outline:3px solid var(--color-accent,#0a66c2);outline-offset:6px}"
     },
     {
       "name": "Type specimen",
@@ -192,30 +206,30 @@
       "refersTo": "specimen",
       "description": "Flat framed variable-type specimen; static preview shows its initial weight.",
       "html": "<div class=\"ds-specimen\"><div class=\"ds-top\"><span>Design meets code</span><span class=\"ds-dot\"></span></div><div class=\"ds-letter\" aria-hidden=\"true\">Ff<span>.</span></div></div>",
-      "css": ".ds-specimen{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;container-type:inline-size;border:1px solid #aa96c3;border-radius:4px;padding:1.25rem 1.6rem 1.4rem;background:#d1bbea;color:var(--color-ink,#292134)}.ds-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.875rem;font-weight:600}.ds-dot{width:14px;height:14px;border-radius:50%;background:var(--color-ink,#292134)}.ds-letter{display:flex;justify-content:center;font-family:var(--font-display,Archivo,sans-serif);font-size:82cqi;line-height:1.08;font-weight:700;letter-spacing:-.04em;padding-block:.05em .13em;user-select:none}.ds-letter span{color:var(--color-violet-deep,#5c348a)}"
+      "css": ".ds-specimen{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;container-type:inline-size;border:1px solid #8aaac8;border-radius:4px;padding:1.25rem 1.6rem 1.4rem;background:#c2ddf5;color:var(--color-ink,#182b3f)}.ds-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.875rem;font-weight:600}.ds-dot{width:14px;height:14px;border-radius:50%;background:var(--color-ink,#182b3f)}.ds-letter{display:flex;justify-content:center;font-family:var(--font-display,Archivo,sans-serif);font-size:82cqi;line-height:1.08;font-weight:700;letter-spacing:-.04em;padding-block:.05em .13em;user-select:none}.ds-letter span{color:var(--color-accent,#0a66c2)}"
     },
     {
       "name": "Project presentation",
       "kind": "card",
       "refersTo": "project-visual",
       "description": "Actual portfolio image with separate caption and reversing image action.",
-      "html": "<article class=\"ds-project\"><a class=\"ds-visual\" href=\"/images/work/del-campo-system.webp\" aria-label=\"View Del Campo Stores design system image\"><img src=\"/images/work/del-campo-system.webp\" alt=\"Del Campo Stores visual system\" width=\"1440\" height=\"1024\"><span class=\"ds-image-action\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></span></a><h3>Del Campo Stores</h3><p>Visual system · Interface design</p></article>",
-      "css": ".ds-project{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;color:var(--color-ink,#292134)}.ds-visual{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1.25;border-radius:4px;background:#f2dfce;padding:1.6rem;color:inherit}.ds-visual img{display:block;width:100%;height:auto}.ds-image-action{position:absolute;right:1rem;bottom:1rem;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--color-paper,#faf9fc);color:var(--color-ink,#292134);transition:background-color 180ms ease,color 180ms ease}.ds-visual:hover .ds-image-action{background:var(--color-ink,#292134);color:var(--color-paper,#faf9fc)}.ds-visual:focus-visible{outline:3px solid var(--color-violet-deep,#5c348a);outline-offset:6px}.ds-project h3{margin:1.25rem 0 0;font-family:var(--font-display,Archivo,sans-serif);font-weight:600;font-size:1.375rem;letter-spacing:-.025em}.ds-project p{margin:.3rem 0 0;color:var(--color-muted,#655c70);font-size:.9375rem}@media(prefers-reduced-motion:reduce){.ds-image-action{transition:none}}"
+      "html": "<article class=\"ds-project\"><a class=\"ds-visual\" href=\"/images/work/del-campo-system.webp\" aria-label=\"View Del Campo Stores design system image\"><img src=\"/images/work/del-campo-system.webp\" alt=\"Del Campo Stores visual system\" width=\"1440\" height=\"1024\"><span class=\"ds-image-action\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></span></a><h3>Del Campo Stores</h3><p>Visual system \u00b7 Interface design</p></article>",
+      "css": ".ds-project{font-family:var(--font-body,'Hanken Grotesk',sans-serif);font-size:1.0625rem;line-height:1.5;color:var(--color-ink,#182b3f)}.ds-visual{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1.25;border-radius:4px;background:#f2dfce;padding:1.6rem;color:inherit}.ds-visual img{display:block;width:100%;height:auto}.ds-image-action{position:absolute;right:1rem;bottom:1rem;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--color-paper,#fafcff);color:var(--color-ink,#182b3f);transition:background-color 180ms ease,color 180ms ease}.ds-visual:hover .ds-image-action{background:var(--color-ink,#182b3f);color:var(--color-paper,#fafcff)}.ds-visual:focus-visible{outline:3px solid var(--color-accent,#0a66c2);outline-offset:6px}.ds-project h3{margin:1.25rem 0 0;font-family:var(--font-display,Archivo,sans-serif);font-weight:600;font-size:1.375rem;letter-spacing:-.025em}.ds-project p{margin:.3rem 0 0;color:var(--color-muted,#526477);font-size:.9375rem}@media(prefers-reduced-motion:reduce){.ds-image-action{transition:none}}"
     }
   ],
   "narrative": {
     "northStar": "The Working Typographic Specimen",
-    "overview": "Graphic sensibility and frontend craft share one visual language: oversized lettering, pale violet fields, open composition, and direct manipulation. The atmosphere is confident and approachable, with compact controls and quiet supporting text giving the display type room to work.\n\nFlat surfaces and carefully aligned rules organize the content. Actual portfolio imagery supplies the visual evidence; the interactive specimen makes the typography tangible without automatic movement. This system describes the implemented local redesign.",
+    "overview": "Graphic sensibility and frontend craft share one visual language: oversized lettering, pale blue fields, open composition, and direct manipulation. The atmosphere is confident and approachable, with compact controls and quiet supporting text giving the display type room to work.\n\nFlat surfaces and carefully aligned rules organize the content. Actual portfolio imagery supplies the visual evidence; the interactive specimen makes the typography tangible without automatic movement. This system describes the implemented local redesign.",
     "keyCharacteristics": [
       "Large Archivo lettering paired with readable Hanken Grotesk.",
-      "Violet and ink identity with soft white reading surfaces.",
+      "Blue and ink identity with soft white reading surfaces.",
       "Flat rectangular imagery and lightly rounded controls.",
       "User-driven interaction and visible keyboard focus."
     ],
     "rules": [
       {
         "name": "The Surface Color Rule",
-        "body": "Use violet as a field and ink as a structural counterweight; preserve readable text contrast across both.",
+        "body": "Use pale blue as a field and ink as a structural counterweight; preserve readable text contrast across both.",
         "section": "colors"
       },
       {

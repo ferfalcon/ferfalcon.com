@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Arrow from '../../components/Arrow.astro';
+const description = 'Del Campo’s first online storefront. Website design and e-commerce platform implementation by Fernando Falcon, with layouts for mobile and desktop.';
+---
+<Layout title="Del Campo — E-commerce case study | Fernando Falcon" description={description} ogDescription={description}>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="opening" id="top"><SiteHeader /></div>
+  <main id="main" class="case-study campo-case" tabindex="-1">
+    <div class="opening">
+      <section class="case-hero wrap" aria-labelledby="campo-title">
+        <div class="case-hero-copy">
+          <a class="text-link case-back" href="/#work"><Arrow direction="down" /> Back to work</a>
+          <h1 id="campo-title">Del Campo<span class="case-title-detail">Creating the company’s first online storefront.</span></h1>
+          <p class="intro">From a retail catalog to an online shopping experience. A storefront that brings product discovery, detailed information, and physical stores together.</p>
+          <p class="case-role">My role: <strong>Website design &amp; platform implementation</strong></p>
+          <a class="text-link" href="#overview">The project at a glance <Arrow direction="down" /></a>
+        </div>
+        <figure class="case-hero-figure">
+          <div class="campo-stage"><img src="/images/work/del-campo-hero.webp" alt="Del Campo desktop storefront with search, category navigation, promotional banners, and featured product cards" width="1200" height="920" fetchpriority="high" /></div>
+          <figcaption>Desktop storefront, shown in a focused crop. Original Spanish-language project UI. <a href="/images/work/del-campo-desktop.webp">View the complete desktop design</a></figcaption>
+        </figure>
+      </section>
+    </div>
+    <section class="wrap section-space case-overview" id="overview" aria-labelledby="overview-title">
+      <div class="case-section-heading"><h2 id="overview-title">The project<br />at a glance.</h2><p>I designed and implemented Del Campo’s first website on an e-commerce platform, connecting a varied product catalog with a consistent storefront for mobile and desktop.</p></div>
+      <dl class="case-facts">
+        <div><dt>Project</dt><dd>The company’s first website</dd></div>
+        <div><dt>Experience</dt><dd>E-commerce storefront</dd></div>
+        <div><dt>My contribution</dt><dd>Website design and platform implementation</dd></div>
+        <div><dt>Design scope shown</dt><dd>Home, categories, product details, and UI foundations</dd></div>
+      </dl>
+      <div class="case-summary">
+        <div><h3>The challenge</h3><p>Give the catalog a clear online structure, with paths for browsing categories, inspecting products, and finding store information.</p></div>
+        <div><h3>The response</h3><p>Combine category shortcuts, promotional entry points, repeatable product cards, and detailed product pages.</p></div>
+        <div><h3>The delivered work</h3><p>Website design and platform implementation, supported by coordinated mobile and desktop layouts and a shared UI style reference.</p></div>
+      </div>
+    </section>
+    <section class="case-tonal" aria-labelledby="catalog-title">
+      <div class="wrap section-space">
+        <div class="case-section-heading"><h2 id="catalog-title">Several ways<br />into the catalog.</h2><div class="case-prose"><p>The homepage brings together image-led categories, promotional banners, and selected products. Direct category links support shoppers who know what they want; collections offer individual items to explore.</p><p>The category view puts filter, sort, and category controls above the product list, keeping browsing choices close to the items they affect.</p></div></div>
+        <div class="campo-catalog">
+          <div class="campo-screen-pair">
+            <figure><div class="campo-stage"><img src="/images/work/del-campo-browse.webp" alt="Mobile homepage with stacked promotions, category shortcuts, and recommended products" width="360" height="1110" loading="lazy" decoding="async" /></div><figcaption>Mobile home: categories and recommendations. <a href="/images/work/del-campo-mobile-home.webp">View complete home design</a></figcaption></figure>
+            <figure><div class="campo-stage"><img src="/images/work/del-campo-category.webp" alt="Mobile category listing with filter, sort, and category buttons above repeated product cards" width="360" height="1110" loading="lazy" decoding="async" /></div><figcaption>Category browsing and product cards. <a href="/images/work/del-campo-mobile-category.webp">View complete category design</a></figcaption></figure>
+          </div>
+          <div class="case-decisions">
+            <div class="case-decision"><h3>Keep product interactions consistent</h3><p>Each product card combines an image, name, price, quantity selector, and cart action. That structure repeats across the homepage, category listing, and related products.</p></div>
+            <div class="case-decision"><h3>Recompose for the available space</h3><p>Desktop pairs promotional banners and uses a three-column product grid. Mobile stacks the banners and places products in a single column, retaining the same core information and controls.</p></div>
+            <div class="case-decision"><h3>Keep navigation within reach</h3><p>The desktop header exposes search and horizontal category navigation. The mobile header condenses these into menu, search, and cart icons, while category shortcuts remain in the page content.</p></div>
+            <div class="case-decision"><h3>Connect browsing with physical stores</h3><p>The shared mobile footer includes locations, opening hours, and contact details, giving shoppers practical store information alongside the catalog.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap section-space campo-product" aria-labelledby="product-title">
+      <figure><div class="campo-stage campo-product-stage"><img src="/images/work/del-campo-product.webp" alt="Mobile product detail with cashew image, price and purchase controls, nutrition table, description, and product inquiry form" width="360" height="1330" loading="lazy" decoding="async" /></div><figcaption>Product information and inquiry layout. Original project copy and sample pricing. <a href="/images/work/del-campo-mobile-product.webp">View complete product design</a></figcaption></figure>
+      <div class="case-decisions">
+        <h2 id="product-title">Give the details<br />their own space.</h2>
+        <div class="case-decision"><h3>Start with the product</h3><p>The image, title, price, and purchase controls sit together at the top. Shoppers can identify the item before moving into the supporting information.</p></div>
+        <div class="case-decision"><h3>Make room for closer inspection</h3><p>A nutrition table, description, and product metadata have distinct places below the purchase area. The layout moves from a quick product overview into more detailed reading.</p></div>
+        <div class="case-decision"><h3>Keep questions in context</h3><p>An inquiry form provides a contact point on the product page. Related products follow it, offering another route into the catalog.</p></div>
+      </div>
+    </section>
+    <section class="case-tonal" aria-labelledby="foundations-title">
+      <div class="wrap section-space">
+        <div class="case-section-heading"><h2 id="foundations-title">A shared<br />visual language.</h2><div class="case-prose"><p>The UI style reference brings typography, colors, icons, buttons, product cards, forms, and table styling together. Source Sans Pro provides regular, semibold, and bold weights.</p><p>Warm cream and brown form the base. Orange purchase actions, yellow browsing and inquiry buttons, and green prices give recurring elements distinct roles across the storefront.</p></div></div>
+        <figure class="campo-foundations"><div class="campo-stage"><img src="/images/work/del-campo-system.webp" alt="Del Campo UI style board showing its logo, Source Sans Pro type, color palette, icons, product card, buttons, form, banners, and table" width="1440" height="1024" loading="lazy" decoding="async" /></div><figcaption>Typography, controls, and recurring interface elements in one reference. <a href="/images/work/del-campo-system.webp">View full-size UI style board</a></figcaption></figure>
+      </div>
+    </section>
+    <section class="wrap section-space case-section-heading" aria-labelledby="implementation-title">
+      <h2 id="implementation-title">Design through<br />implementation.</h2>
+      <div class="case-prose"><p>My role covered both website design and platform implementation. That connected the storefront’s visual structure with the work of building it within an e-commerce platform.</p><p>The project established Del Campo’s first website. The retained materials show the catalog structure, consistent product interactions, and layouts composed for mobile and desktop, supported by shared visual foundations.</p></div>
+    </section>
+    <section class="contact-section" aria-labelledby="case-contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="case-contact-title">From design to a working website.<br /><a href="mailto:fer.falcon.dg@gmail.com">Let’s talk.<Arrow /></a></h2>
+        <div class="case-closing-links"><a class="text-link" href="/work/elio/">Next project: Elio <Arrow /></a><a class="text-link" href="/#work">Back to selected work <Arrow /></a><a class="text-link" href="/fer-falcon-resume.pdf" download>Download resume <Arrow direction="down" /></a></div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</Layout>

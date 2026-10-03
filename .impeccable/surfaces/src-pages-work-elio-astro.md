@@ -13,7 +13,7 @@ Mode: Read, with product imagery supporting the narrative. Audience: clients and
 
 THESIS: Make Fernando's design-to-implementation contribution understandable through a quick overview followed by the clinical workflow and review decisions.
 
-OWN-WORLD: Inherit pale violet, plum ink, Archivo headings, Hanken Grotesk prose, flat surfaces and thin rules. Aqua is confined to the existing product image stages.
+OWN-WORLD: Inherit pale blue, slate ink, primary blue accents (#0a66c2), Archivo headings, Hanken Grotesk prose, flat surfaces and thin rules. Aqua is confined to the existing product image stages.
 
 STORY: Understand the problem, role and delivered workflow; read the decisions and implementation context; return to selected work, download the résumé or contact Fernando.
 
@@ -50,3 +50,10 @@ The source and supplied desktop, mobile, compact mobile, and hero screenshots su
 The implementation owner separately supplied passing build and diff checks; no horizontal overflow at `1440px`, `390px`, `320px`, and the actual `1449px` browser width; visible skip-link focus with focus moved to main; successful homepage Explore Elio navigation; no console errors; both images loaded; HTTP 200 for the case route, home, résumé, and both images; resolving internal anchors; no scripts in the production case page; and a raster provenance scan covering three images with zero missing records. These are supplied execution results, not an independent browser rerun by the documentation reviewer.
 
 This is a local surface finish review. It is not an application audit, full accessibility certification, or production release. No publication was requested or performed.
+
+
+## Color update — 2026-10-03
+
+Fernando requested `#0a66c2` as the frontend color. Primary actions, range controls, punctuation, focus, and scrollbars now use this blue; pale blue fields and slate neutrals replace the prior violet palette. Hover uses deep blue. Layouts, typography, imagery, and content are retained. Earlier review records describe the palette at their original capture time; the current color update is verified separately.
+
+Verification: production build and diff check passed. Homepage and Elio desktop/mobile opening captures are under `.impeccable/review/blue/`. Browser confirms primary button `rgb(10, 102, 194)` and `--color-accent: #0a66c2`. Main text pairs exceed 4.5:1; accent focus has at least 4.05:1 against the tinted specimen. No layout changes were introduced.
