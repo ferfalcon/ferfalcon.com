@@ -17,7 +17,9 @@ const {
 		<meta name="generator" content={Astro.generator} />
         <link rel="preload" href="/fonts/archivo-variable.ttf" as="font" type="font/ttf" crossorigin />
         <meta name="description" content={description} />
-        <meta name="theme-color" content="#0a66c2" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#0a66c2" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#101c29" media="(prefers-color-scheme: dark)" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={ogDescription} />
         <meta property="og:type" content="website" />

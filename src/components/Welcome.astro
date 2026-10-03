@@ -11,7 +11,7 @@ const experience = [
 
 ---
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="opening" id="top">
+<div class="opening opening-home" id="top">
   <SiteHeader home />
   <main id="main" tabindex="-1">
     <section class="hero wrap">
@@ -22,13 +22,43 @@ const experience = [
       </div>
       <div class="type-specimen">
         <div class="specimen-top"><span>Design meets code</span><span class="specimen-swatch" aria-hidden="true"></span></div>
-        <div class="specimen-letter" aria-hidden="true">Ff<span>.</span></div>
-        <div class="specimen-controls" hidden>
-          <div class="specimen-label"><label for="type-weight">Make your mark</label><output for="type-weight" id="weight-value">700</output></div>
-          <input type="range" min="100" max="900" value="700" step="10" id="type-weight" aria-describedby="specimen-hint" />
-          <p id="specimen-hint">A little type play. Slide to change the weight.</p>
+        <div class="card-stage">
+          <svg class="blueprint-card" viewBox="0 0 400 300" role="img" aria-labelledby="card-title card-description">
+            <title id="card-title">Payment card blueprint</title>
+            <desc id="card-description">A flat, outlined payment card with diagonal hatching and drafting measurements.</desc>
+            <defs>
+              <pattern id="card-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+                <path d="M 0 0 V 10" class="card-hatch-line" />
+              </pattern>
+              <clipPath id="card-outline"><rect x="40" y="65" width="320" height="190" rx="22" /></clipPath>
+            </defs>
+            <g class="card-dimensions">
+              <path d="M40 50 V30 M360 50 V30 M40 40 H360 M25 65 H5 M25 255 H5 M15 65 V255 M40 270 V290 M360 270 V290 M40 280 H360" />
+              <path d="m36 44 8-8 m312 8 8-8 M11 69 l8-8 M11 259 l8-8 m17 33 8-8 m312 8 8-8" />
+            </g>
+            <g class="card-annotations">
+              <text x="200" y="24" text-anchor="middle">FORM / FUNCTION</text>
+              <text x="200" y="298" text-anchor="middle">DESIGNED TO WORK</text>
+            </g>
+            <rect x="40" y="65" width="320" height="190" rx="22" fill="url(#card-hatch)" class="card-shell" />
+            <g clip-path="url(#card-outline)" class="card-details">
+              <path d="M40 95 H360 V127 H40 Z" class="card-solid" />
+              <rect x="65" y="151" width="183" height="25" class="card-solid" />
+              <text x="273" y="174" class="card-number">123</text>
+              <rect x="65" y="203" width="45" height="29" rx="9" class="card-solid" />
+              <path d="M80 203 V232 M95 203 V232 M65 217 H110" />
+              <path d="M129 203 H330 V211 H129 Z M129 223 H210 V231 H129 Z M222 223 H302 V231 H222 Z" class="card-solid" />
+            </g>
+          </svg>
         </div>
-        <noscript><p class="specimen-static">Graphic sensibility. Built for the browser.</p></noscript>
+        <div class="specimen-controls" hidden>
+          <div class="specimen-label"><label for="card-size">Card size</label><output for="card-size" id="card-size-value">100%</output></div>
+          <input type="range" min="65" max="100" value="100" step="1" id="card-size" aria-describedby="specimen-hint" />
+          <div class="specimen-label"><label for="hatch-spacing">Hatch spacing</label><output for="hatch-spacing" id="hatch-spacing-value">10</output></div>
+          <input type="range" min="5" max="20" value="10" step="1" id="hatch-spacing" aria-describedby="specimen-hint" />
+          <p id="specimen-hint">A little design play. Adjust the scale and rhythm.</p>
+        </div>
+        <noscript><p class="specimen-static">Form meets function. Built to the details.</p></noscript>
       </div>
       <div class="hero-baseline"><p>Thoughtful interfaces. Responsive websites. Visual identities.</p><span>Based in Uruguay</span></div>
     </section>
@@ -91,15 +121,26 @@ const experience = [
 </div>
 <SiteFooter />
 <script>
-  const slider = document.querySelector<HTMLInputElement>('#type-weight');
-  const specimen = document.querySelector<HTMLElement>('.specimen-letter');
-  const output = document.querySelector<HTMLOutputElement>('#weight-value');
+  const size = document.querySelector<HTMLInputElement>('#card-size');
+  const spacing = document.querySelector<HTMLInputElement>('#hatch-spacing');
+  const card = document.querySelector<SVGSVGElement>('.blueprint-card');
+  const hatch = document.querySelector<SVGPatternElement>('#card-hatch');
+  const hatchLine = document.querySelector<SVGPathElement>('.card-hatch-line');
+  const sizeOutput = document.querySelector<HTMLOutputElement>('#card-size-value');
+  const spacingOutput = document.querySelector<HTMLOutputElement>('#hatch-spacing-value');
   const controls = document.querySelector<HTMLElement>('.specimen-controls');
-  if (slider && specimen && output && controls) {
+  if (size && spacing && card && hatch && hatchLine && sizeOutput && spacingOutput && controls) {
     controls.hidden = false;
-    slider.addEventListener('input', () => {
-      specimen.style.fontWeight = slider.value;
-      output.value = slider.value;
-    });
+    const update = () => {
+      card.style.inlineSize = `${size.value}%`;
+      sizeOutput.value = `${size.value}%`;
+      hatch.setAttribute('width', spacing.value);
+      hatch.setAttribute('height', spacing.value);
+      hatchLine.setAttribute('d', `M 0 0 V ${spacing.value}`);
+      spacingOutput.value = spacing.value;
+    };
+    size.addEventListener('input', update);
+    spacing.addEventListener('input', update);
+    update();
   }
 </script>

@@ -80,6 +80,10 @@ components:
 
 # Design System: Fernando Falcon
 
+## Opening blueprint detail — 2026-10-03
+
+The homepage header and interactive type specimen use a restrained blueprint poster treatment: a 20px drafting grid tinted from the accent at 7% with 100px major divisions at 12%, crosshair registration marks at the header rule, and construction guides behind the lettering at 24%. The specimen uses a deliberately sharper 2px corner, an inset drawing frame, a crosshair swatch, uppercase sheet lettering, and a framed weight readout inspired by the supplied blueprint poster. These are intentional exceptions for the requested blueprint surface; the grid is confined to the opening header and specimen. Existing composition, palette, copy, and interaction stay intact. Desktop and 390px mobile previews were inspected; mobile has no horizontal overflow and the keyboard slider updates the displayed weight and lettering. Production build and diff check passed.
+
 ## Overview
 
 **Creative North Star: "The Working Typographic Specimen"**
