@@ -24,30 +24,29 @@ const experience = [
         <div class="specimen-top"><span>Design meets code</span><span class="specimen-swatch" aria-hidden="true"></span></div>
         <div class="card-stage">
           <svg class="blueprint-card" viewBox="0 0 400 300" role="img" aria-labelledby="card-title card-description">
-            <title id="card-title">Payment card blueprint</title>
-            <desc id="card-description">A flat, outlined payment card with diagonal hatching and drafting measurements.</desc>
+            <title id="card-title">Interface card blueprint</title>
+            <desc id="card-description">A rounded interface card with a circular avatar and three placeholder text lines, layered with diagonal hatching and drafting guides.</desc>
             <defs>
               <pattern id="card-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
                 <path d="M 0 0 V 10" class="card-hatch-line" />
               </pattern>
-              <clipPath id="card-outline"><rect x="40" y="65" width="320" height="190" rx="22" /></clipPath>
             </defs>
             <g class="card-dimensions">
-              <path d="M40 50 V30 M360 50 V30 M40 40 H360 M25 65 H5 M25 255 H5 M15 65 V255 M40 270 V290 M360 270 V290 M40 280 H360" />
-              <path d="m36 44 8-8 m312 8 8-8 M11 69 l8-8 M11 259 l8-8 m17 33 8-8 m312 8 8-8" />
+              <path d="M40 78 V58 M360 78 V58 M40 68 H360 M28 90 H8 M28 224 H8 M18 90 V224 M40 236 V256 M360 236 V256 M40 246 H360" />
+              <path d="m36 72 8-8 m312 8 8-8 M14 94 l8-8 M14 228 l8-8 m17 22 8-8 m312 8 8-8" />
+              <path class="card-guides" d="M74 80 V234 M110 80 V234 M30 131 H370 M30 171 H370" />
             </g>
             <g class="card-annotations">
-              <text x="200" y="24" text-anchor="middle">FORM / FUNCTION</text>
-              <text x="200" y="298" text-anchor="middle">DESIGNED TO WORK</text>
+              <text x="200" y="48" text-anchor="middle">FORM / FUNCTION</text>
+              <text x="200" y="274" text-anchor="middle">DESIGNED TO WORK</text>
             </g>
-            <rect x="40" y="65" width="320" height="190" rx="22" fill="url(#card-hatch)" class="card-shell" />
-            <g clip-path="url(#card-outline)" class="card-details">
-              <path d="M40 95 H360 V127 H40 Z" class="card-solid" />
-              <rect x="65" y="151" width="183" height="25" class="card-solid" />
-              <text x="273" y="174" class="card-number">123</text>
-              <rect x="65" y="203" width="45" height="29" rx="9" class="card-solid" />
-              <path d="M80 203 V232 M95 203 V232 M65 217 H110" />
-              <path d="M129 203 H330 V211 H129 Z M129 223 H210 V231 H129 Z M222 223 H302 V231 H222 Z" class="card-solid" />
+            <rect x="40" y="90" width="320" height="134" rx="8" class="card-surface" />
+            <rect x="40" y="90" width="320" height="134" rx="8" fill="url(#card-hatch)" class="card-shell" />
+            <g class="card-details">
+              <circle cx="74" cy="143" r="20" class="card-placeholder" />
+              <rect x="110" y="126" width="180" height="13" rx="3" class="card-placeholder" />
+              <rect x="110" y="153" width="235" height="13" rx="3" class="card-placeholder" />
+              <rect x="110" y="177" width="200" height="13" rx="3" class="card-placeholder" />
             </g>
           </svg>
         </div>

@@ -153,11 +153,12 @@ h1 { font-size: clamp(3.3rem, 6.7vw, 6rem); line-height: 1.02; font-weight: 600;
 .card-stage { display: grid; place-items: center; aspect-ratio: 1.15; padding-block: 1rem; }
 .blueprint-card { inline-size: 100%; block-size: auto; overflow: visible; }
 .card-shell, .card-details { stroke: var(--color-inverse-text); stroke-width: 1.4; }
-.card-hatch-line { stroke: var(--color-inverse-text); stroke-width: .8; opacity: .65; }
-.card-solid { fill: #0b437d; }
+.card-hatch-line { stroke: var(--color-inverse-text); stroke-width: .8; opacity: .25; }
+.card-surface { fill: rgb(219 234 254 / 10%); }
+.card-placeholder { fill: #4876a4; }
 .card-dimensions { fill: none; stroke: #8fc5ff; stroke-width: .8; }
+.card-guides { stroke-dasharray: 3 5; opacity: .45; }
 .card-annotations { fill: var(--color-inverse-text); font-family: var(--font-body); font-size: 10px; letter-spacing: 1.5px; }
-.card-number { fill: #0b437d; stroke-width: .8; font-family: var(--font-display); font-size: 26px; font-weight: 600; }
 .specimen-label { padding-block-start: 1rem; border-block-start: 1px solid #8aaac8; font-weight: 600; }
 .specimen-label output { font-variant-numeric: tabular-nums; }
 input[type='range'] { inline-size: 100%; accent-color: var(--color-accent); min-block-size: 44px; margin: 0; cursor: ew-resize; }

@@ -80,6 +80,12 @@ components:
 
 # Design System: Fernando Falcon
 
+## Interface-card reference blend and dark mode — 2026-10-03
+
+The homepage specimen now blends the supplied skeleton-card reference with the blueprint treatment: a wide, softly rounded card, circular avatar, and three rounded placeholder text bars. A translucent blue surface, lighter diagonal hatching, dimension ticks, and dashed alignment guides retain the drafting language. The previous payment-card stripe, chip, and number are removed. Native sliders control card scale (65–100%) and hatch spacing (5–20); controls remain hidden until JavaScript is ready, with a static no-script description and no automatic animation.
+
+The frontend follows `prefers-color-scheme: dark` using CSS token overrides for reading surfaces, text, accents, and dividers. Dedicated inverse tokens keep the blue homepage hero and dark workflow/contact sections readable; original portfolio images and their project-specific stage colors are unchanged. Browser color-scheme and light/dark theme-color metadata are set in the shared layout. The dark palette is screen-only, preserving light print styling. Production build and whitespace checks passed; no new browser or visual verification was performed for this blend or dark-mode pass.
+
 ## Opening blueprint detail — 2026-10-03
 
 The homepage header and interactive type specimen use a restrained blueprint poster treatment: a 20px drafting grid tinted from the accent at 7% with 100px major divisions at 12%, crosshair registration marks at the header rule, and construction guides behind the lettering at 24%. The specimen uses a deliberately sharper 2px corner, an inset drawing frame, a crosshair swatch, uppercase sheet lettering, and a framed weight readout inspired by the supplied blueprint poster. These are intentional exceptions for the requested blueprint surface; the grid is confined to the opening header and specimen. Existing composition, palette, copy, and interaction stay intact. Desktop and 390px mobile previews were inspected; mobile has no horizontal overflow and the keyboard slider updates the displayed weight and lettering. Production build and diff check passed.
@@ -164,11 +170,11 @@ The Archivo wordmark pairs with a compact row of semibold anchor links. Anchors 
 
 Real project imagery occupies lightly rounded, flat color stages. Supporting titles and descriptions sit below the image without an enclosing card border. A circular arrow affordance reverses from paper to ink on image-link hover. Desktop image stages may have distinct aspect ratios; mobile brings them to a shared ratio (`1.25`). Image links have descriptive accessible names and informative primary-image alt text.
 
-### Typographic specimen and range
+### Interface-card specimen and ranges
 
-The specimen uses a deeper pale-blue panel, a thin border, and oversized Archivo letters. Container-relative type sizing (`82cqi`) fits the desktop panel; mobile uses `clamp(9rem, 48vw, 17rem)`. A native range changes the weight from `100` to `900` in steps of `10`, starting at `700`. The output remains numeric and stable in width.
+The specimen uses a deep-blue drafting panel with an inline SVG interface card. A circular avatar and three placeholder text bars echo the supplied reference; diagonal hatching, alignment guides, and measurements connect it to the blueprint opening. The card scales within its fixed stage without changing the surrounding layout.
 
-Controls are exposed only when the script is ready. The native range supports pointer and keyboard input, a visible label, a descriptive hint, and the shared focus outline. Without JavaScript, the specimen remains visible with static explanatory text. No motion runs automatically.
+Two native ranges adjust card size (65–100%, initially 100%) and hatch spacing (5–20, initially 10). Each has a visible label and numeric output. Controls are exposed only when the script is ready, support native pointer and keyboard input, and use the shared focus outline. Without JavaScript, the illustration remains visible with static explanatory text. No motion runs automatically.
 
 ### Ruled information rows
 
