@@ -10,6 +10,9 @@ colors:
   paper: "#fafcff"
   soft: "#edf4fb"
   line: "#cbd9e6"
+  button: "#ffcb00"
+  button-hover: "#ffdb4d"
+  button-text: "#073b75"
 typography:
   display:
     fontFamily: "Archivo, sans-serif"
@@ -51,12 +54,12 @@ spacing:
   xl: "2.5rem"
 components:
   button-dark:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.paper}"
+    backgroundColor: "{colors.button}"
+    textColor: "{colors.button-text}"
     rounded: "{rounded.sm}"
     padding: "1rem 1.4rem"
   button-dark-hover:
-    backgroundColor: "{colors.accent-hover}"
+    backgroundColor: "{colors.button-hover}"
   text-link:
     textColor: "inherit"
   navigation:
@@ -79,6 +82,12 @@ components:
 ---
 
 # Design System: Fernando Falcon
+
+## Continuous hero grid and yellow buttons — 2026-10-03
+
+The homepage's light drafting grid now covers the entire blue opening section, including the navigation, hero copy, and baseline. The specimen panel has a transparent background and no separate grid, allowing the section pattern to continue through it. Its frame, interface-card hatching, guides, and sliders remain intact.
+
+Primary buttons use the supplied reference's yellow (#ffcb00), deep blue text (#073b75), and a lighter yellow hover (#ffdb4d) in both system themes. Button colors have dedicated tokens so the existing blue accents and range controls retain their palette. Production build and whitespace checks passed; the final homepage was visually verified in the local desktop browser. Earlier mobile and keyboard checks below apply to their earlier implementations.
 
 ## Interface-card reference blend and dark mode — 2026-10-03
 
