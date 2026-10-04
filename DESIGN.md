@@ -83,6 +83,12 @@ components:
 
 # Design System: Fernando Falcon
 
+## Page-wide drafting texture — 2026-10-03
+
+The shared body background uses 20px minor lines and 100px major lines. The homepage reading surface repeats that pattern over its paper color, while the hero has stronger pale-blue lines (10% minor / 19% major). Reading surfaces use theme-aware blue lines (3% / 6% in light mode, 2.5% / 5.5% in dark mode), reduced at Fernando's request to keep secondary sections quieter. About has a 55% opaque soft tint that attenuates the grid beneath it. Workflow and contact retain their ink surfaces with blue lines at 2.5% / 5%. Project imagery remains on solid stages. The added page grid is screen-only.
+
+Verified in the local dark-theme desktop and 390px mobile browser; mobile has no horizontal overflow. Production build and whitespace checks passed. The mechanical detector reported existing palette/type documentation advisories.
+
 ## Continuous hero grid and yellow buttons — 2026-10-03
 
 The homepage's light drafting grid now covers the entire blue opening section, including the navigation, hero copy, and baseline. The specimen panel has a transparent background and no separate grid, allowing the section pattern to continue through it. Its frame, interface-card hatching, guides, and sliders remain intact.

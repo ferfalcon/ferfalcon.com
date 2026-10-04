@@ -14,6 +14,9 @@
   --color-button: #ffcb00;
   --color-button-hover: #ffdb4d;
   --color-button-text: #073b75;
+  --page-grid-minor: color-mix(in srgb, var(--color-accent) 3%, transparent);
+  --page-grid-major: color-mix(in srgb, var(--color-accent) 6%, transparent);
+  --grid-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   --page-color-scheme: light;
   --font-display: Archivo, sans-serif;
   --font-body: 'Hanken Grotesk', sans-serif;
@@ -38,12 +41,27 @@
     --color-soft: #172737;
     --color-line: #3b5268;
     --color-inverse-surface: #0b1622;
+    --page-grid-minor: rgb(143 197 255 / 2.5%);
+    --page-grid-major: rgb(143 197 255 / 5.5%);
     --page-color-scheme: dark;
     color-scheme: dark;
   }
 }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-size: 1.0625rem; line-height: 1.5; }
+/* One drafting rhythm, with surfaces controlling its visual weight. */
+@media screen {
+  body, .opening-home .page-body, .opening-home :is(.workflow-feature, .contact-section) {
+    --grid-pattern: linear-gradient(var(--grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--grid-major) 1px, transparent 1px), linear-gradient(var(--grid-minor) 1px, transparent 1px), linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+    background-image: var(--grid-pattern);
+    background-size: var(--grid-size);
+    background-position: center top;
+  }
+  body, .opening-home .page-body {
+    --grid-minor: var(--page-grid-minor);
+    --grid-major: var(--page-grid-major);
+  }
+}
 ::selection { background: var(--color-ink); color: var(--color-paper); }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .25em; }
 button, input { font: inherit; }
@@ -71,12 +89,12 @@ section[id], main { scroll-margin-block-start: 2rem; }
   --blueprint-pattern: linear-gradient(var(--blueprint-major) 1px, transparent 1px), linear-gradient(90deg, var(--blueprint-major) 1px, transparent 1px), linear-gradient(var(--blueprint-grid) 1px, transparent 1px), linear-gradient(90deg, var(--blueprint-grid) 1px, transparent 1px);
 }
 .opening-home {
-  --blueprint-grid: rgb(219 234 254 / 7%);
+  --blueprint-grid: rgb(219 234 254 / 10%);
   --blueprint-rule: rgb(219 234 254 / 32%);
-  --blueprint-major: rgb(219 234 254 / 13%);
+  --blueprint-major: rgb(219 234 254 / 19%);
   background: #073b75;
   background-image: var(--blueprint-pattern);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-size: var(--grid-size);
   background-position: center top;
   color: var(--color-inverse-text);
   color-scheme: dark;
@@ -186,7 +204,7 @@ input[type='range'] { inline-size: 100%; accent-color: var(--color-accent); min-
 #specimen-hint, .specimen-static { font-size: .8125rem; }
 .hero-baseline { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem 2rem; padding-block: 1.5rem; border-block-start: 1px solid #8aaac8; font-size: .875rem; }
 .hero-baseline span { white-space: nowrap; }
-.page-body { background: var(--color-paper); }
+.page-body { background-color: var(--color-paper); }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-block-end: 2.5rem; }
 .section-heading > p { max-inline-size: 37ch; color: var(--color-muted); }
 .work-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
@@ -247,6 +265,13 @@ input[type='range'] { inline-size: 100%; accent-color: var(--color-accent); min-
   .workflow-actions .button { gap: 1rem; }
 }
 .about-section { background: var(--color-soft); }
+@media screen {
+  .opening-home .about-section { background: color-mix(in srgb, var(--color-soft) 55%, transparent); }
+  .opening-home :is(.workflow-feature, .contact-section) {
+    --grid-minor: rgb(143 197 255 / 2.5%);
+    --grid-major: rgb(143 197 255 / 5%);
+  }
+}
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 6rem); }
 .about-heading .text-link { margin-block-start: 2rem; }
 .about-copy > p { max-inline-size: 65ch; margin-block-end: 1.2rem; color: var(--color-muted); }
