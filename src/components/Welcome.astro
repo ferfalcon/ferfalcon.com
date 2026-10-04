@@ -25,7 +25,7 @@ const experience = [
         <div class="card-stage">
           <svg class="blueprint-card" viewBox="0 0 400 300" role="img" aria-labelledby="card-title card-description">
             <title id="card-title">Interface card blueprint</title>
-            <desc id="card-description">A rounded interface card with a circular avatar and three placeholder text lines, layered with diagonal hatching and drafting guides.</desc>
+            <desc id="card-description">A rounded interface card with a circular avatar and a title placeholder and two body text lines, layered with diagonal hatching and drafting guides.</desc>
             <defs>
               <pattern id="card-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
                 <path d="M 0 0 V 10" class="card-hatch-line" />
@@ -34,7 +34,7 @@ const experience = [
             <g class="card-dimensions">
               <path d="M40 78 V58 M360 78 V58 M40 68 H360 M28 90 H8 M28 224 H8 M18 90 V224 M40 236 V256 M360 236 V256 M40 246 H360" />
               <path d="m36 72 8-8 m312 8 8-8 M14 94 l8-8 M14 228 l8-8 m17 22 8-8 m312 8 8-8" />
-              <path class="card-guides" d="M74 80 V234 M110 80 V234 M30 131 H370 M30 171 H370" />
+              <path class="card-guides" d="M76 80 V234 M112 80 V234 M30 124 H370 M30 151 H370" />
             </g>
             <g class="card-annotations">
               <text x="200" y="48" text-anchor="middle">FORM / FUNCTION</text>
@@ -43,19 +43,25 @@ const experience = [
             <rect x="40" y="90" width="320" height="134" rx="8" class="card-surface" />
             <rect x="40" y="90" width="320" height="134" rx="8" fill="url(#card-hatch)" class="card-shell" />
             <g class="card-details">
-              <circle cx="74" cy="143" r="20" class="card-placeholder" />
-              <rect x="110" y="126" width="180" height="13" rx="3" class="card-placeholder" />
-              <rect x="110" y="153" width="235" height="13" rx="3" class="card-placeholder" />
-              <rect x="110" y="177" width="200" height="13" rx="3" class="card-placeholder" />
+              <circle cx="76" cy="134" r="20" class="card-placeholder card-avatar" />
+              <rect x="112" y="114" width="139" height="20" rx="3" class="card-placeholder card-heading" />
+              <rect x="112" y="146" width="232" height="10" rx="3" class="card-placeholder card-body-line" />
+              <rect x="112" y="168" width="197" height="10" rx="3" class="card-placeholder card-body-line" />
             </g>
           </svg>
         </div>
         <div class="specimen-controls" hidden>
-          <div class="specimen-label"><label for="card-size">Card size</label><output for="card-size" id="card-size-value">100%</output></div>
-          <input type="range" min="65" max="100" value="100" step="1" id="card-size" aria-describedby="specimen-hint" />
-          <div class="specimen-label"><label for="hatch-spacing">Hatch spacing</label><output for="hatch-spacing" id="hatch-spacing-value">10</output></div>
-          <input type="range" min="5" max="20" value="10" step="1" id="hatch-spacing" aria-describedby="specimen-hint" />
-          <p id="specimen-hint">A little design play. Adjust the scale and rhythm.</p>
+          <div class="specimen-label"><label for="card-padding">Padding</label><output for="card-padding" id="card-padding-value">16px</output></div>
+          <input type="range" min="8" max="32" value="16" step="2" id="card-padding" aria-describedby="specimen-hint" />
+          <fieldset class="card-size-options" aria-describedby="specimen-hint">
+            <legend>Size</legend>
+            <div class="card-size-choices">
+              <label><input type="radio" name="card-size" value="240" /><span>Small</span></label>
+              <label><input type="radio" name="card-size" value="280" /><span>Medium</span></label>
+              <label><input type="radio" name="card-size" value="320" checked /><span>Large</span></label>
+            </div>
+          </fieldset>
+          <p id="specimen-hint">A little design play. Adjust the padding and size.</p>
         </div>
         <noscript><p class="specimen-static">Form meets function. Built to the details.</p></noscript>
       </div>
@@ -120,26 +126,44 @@ const experience = [
 </div>
 <SiteFooter />
 <script>
-  const size = document.querySelector<HTMLInputElement>('#card-size');
-  const spacing = document.querySelector<HTMLInputElement>('#hatch-spacing');
+  const padding = document.querySelector<HTMLInputElement>('#card-padding');
+  const sizes = document.querySelectorAll<HTMLInputElement>('input[name="card-size"]');
   const card = document.querySelector<SVGSVGElement>('.blueprint-card');
-  const hatch = document.querySelector<SVGPatternElement>('#card-hatch');
-  const hatchLine = document.querySelector<SVGPathElement>('.card-hatch-line');
-  const sizeOutput = document.querySelector<HTMLOutputElement>('#card-size-value');
-  const spacingOutput = document.querySelector<HTMLOutputElement>('#hatch-spacing-value');
+  const output = document.querySelector<HTMLOutputElement>('#card-padding-value');
   const controls = document.querySelector<HTMLElement>('.specimen-controls');
-  if (size && spacing && card && hatch && hatchLine && sizeOutput && spacingOutput && controls) {
-    controls.hidden = false;
+  if (padding && sizes.length && card && output && controls) {
     const update = () => {
-      card.style.inlineSize = `${size.value}%`;
-      sizeOutput.value = `${size.value}%`;
-      hatch.setAttribute('width', spacing.value);
-      hatch.setAttribute('height', spacing.value);
-      hatchLine.setAttribute('d', `M 0 0 V ${spacing.value}`);
-      spacingOutput.value = spacing.value;
+      const inset = Number(padding.value);
+      const width = Number(document.querySelector<HTMLInputElement>('input[name="card-size"]:checked')?.value ?? 320);
+      const left = (400 - width) / 2;
+      const right = left + width;
+      const textLeft = left + inset + 56;
+      const textWidth = width - inset * 2 - 56;
+      const titleTop = 98 + inset;
+      const set = (selector: string, attributes: Record<string, number | string>) => {
+        card.querySelectorAll(selector).forEach((element) => {
+          Object.entries(attributes).forEach(([name, value]) => element.setAttribute(name, String(value)));
+        });
+      };
+      set('.card-surface, .card-shell', { x: left, width });
+      set('.card-avatar', { cx: left + inset + 20, cy: titleTop + 20 });
+      set('.card-heading', { x: textLeft, y: titleTop, width: Math.round(textWidth * .6) });
+      const lines = card.querySelectorAll('.card-body-line');
+      lines.forEach((line, index) => {
+        line.setAttribute('x', String(textLeft));
+        line.setAttribute('y', String(titleTop + 32 + index * 22));
+        line.setAttribute('width', String(Math.round(textWidth * (index === 0 ? 1 : .85))));
+      });
+      const dimensions = card.querySelectorAll('.card-dimensions > path');
+      dimensions[0]?.setAttribute('d', `M${left} 78 V58 M${right} 78 V58 M${left} 68 H${right} M${left - 12} 90 H${left - 32} M${left - 12} 224 H${left - 32} M${left - 22} 90 V224 M${left} 236 V256 M${right} 236 V256 M${left} 246 H${right}`);
+      dimensions[1]?.setAttribute('d', `M${left - 4} 72 l8 -8 M${right - 4} 72 l8 -8 M${left - 26} 94 l8 -8 M${left - 26} 228 l8 -8 M${left - 4} 250 l8 -8 M${right - 4} 250 l8 -8`);
+      set('.card-guides', { d: `M${left + inset + 20} 80 V234 M${textLeft} 80 V234 M${left - 10} ${titleTop + 10} H${right + 10} M${left - 10} ${titleTop + 37} H${right + 10}` });
+      output.value = `${inset}px`;
+      padding.style.setProperty('--range-progress', `${(inset - 8) / 24 * 100}%`);
     };
-    size.addEventListener('input', update);
-    spacing.addEventListener('input', update);
+    padding.addEventListener('input', update);
+    sizes.forEach((size) => size.addEventListener('change', update));
     update();
+    controls.hidden = false;
   }
 </script>
