@@ -51,17 +51,23 @@ const experience = [
           </svg>
         </div>
         <div class="specimen-controls" hidden>
-          <div class="specimen-label"><label for="card-padding">Padding</label><output for="card-padding" id="card-padding-value">16px</output></div>
-          <input type="range" min="8" max="32" value="16" step="2" id="card-padding" aria-describedby="specimen-hint" />
-          <fieldset class="card-size-options" aria-describedby="specimen-hint">
+          <fieldset class="card-options" aria-describedby="specimen-hint">
+            <legend>Space</legend>
+            <div class="card-choices">
+              <label><input type="radio" name="card-space" value="8" /><span>Tight</span></label>
+              <label><input type="radio" name="card-space" value="16" checked /><span>Balanced</span></label>
+              <label><input type="radio" name="card-space" value="24" /><span>Airy</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="card-options" aria-describedby="specimen-hint">
             <legend>Size</legend>
-            <div class="card-size-choices">
-              <label><input type="radio" name="card-size" value="240" /><span>Small</span></label>
+            <div class="card-choices">
+              <label><input type="radio" name="card-size" value="180" /><span>Small</span></label>
               <label><input type="radio" name="card-size" value="280" /><span>Medium</span></label>
               <label><input type="radio" name="card-size" value="320" checked /><span>Large</span></label>
             </div>
           </fieldset>
-          <p id="specimen-hint">A little design play. Adjust the padding and size.</p>
+          <p id="specimen-hint">A little design play. Explore space and size.</p>
         </div>
         <noscript><p class="specimen-static">Form meets function. Built to the details.</p></noscript>
       </div>
@@ -126,42 +132,52 @@ const experience = [
 </div>
 <SiteFooter />
 <script>
-  const padding = document.querySelector<HTMLInputElement>('#card-padding');
+  const spaces = document.querySelectorAll<HTMLInputElement>('input[name="card-space"]');
   const sizes = document.querySelectorAll<HTMLInputElement>('input[name="card-size"]');
   const card = document.querySelector<SVGSVGElement>('.blueprint-card');
-  const output = document.querySelector<HTMLOutputElement>('#card-padding-value');
   const controls = document.querySelector<HTMLElement>('.specimen-controls');
-  if (padding && sizes.length && card && output && controls) {
+  if (spaces.length && sizes.length && card && controls) {
     const update = () => {
-      const inset = Number(padding.value);
+      const inset = Number(document.querySelector<HTMLInputElement>('input[name="card-space"]:checked')?.value ?? 16);
       const width = Number(document.querySelector<HTMLInputElement>('input[name="card-size"]:checked')?.value ?? 320);
+      const stacked = width === 180;
+      const height = stacked ? 112 + inset * 3 : Math.max(134, 88 + inset * 2);
+      const top = 157 - height / 2;
+      const bottom = top + height;
       const left = (400 - width) / 2;
       const right = left + width;
-      const textLeft = left + inset + 56;
-      const textWidth = width - inset * 2 - 56;
-      const titleTop = 98 + inset;
+      const avatarX = stacked ? 200 : left + inset + 20;
+      const avatarY = top + inset + (stacked ? 20 : 28);
+      const textLeft = stacked ? left + inset : left + inset * 2 + 40;
+      const textWidth = right - inset - textLeft;
+      const titleTop = stacked ? top + inset * 2 + 40 : top + inset + 8;
+      const titleWidth = Math.round(textWidth * .6);
       const set = (selector: string, attributes: Record<string, number | string>) => {
         card.querySelectorAll(selector).forEach((element) => {
           Object.entries(attributes).forEach(([name, value]) => element.setAttribute(name, String(value)));
         });
       };
-      set('.card-surface, .card-shell', { x: left, width });
-      set('.card-avatar', { cx: left + inset + 20, cy: titleTop + 20 });
-      set('.card-heading', { x: textLeft, y: titleTop, width: Math.round(textWidth * .6) });
+      set('.card-surface, .card-shell', { x: left, y: top, width, height });
+      set('.card-avatar', { cx: avatarX, cy: avatarY });
+      set('.card-heading', { x: stacked ? 200 - titleWidth / 2 : textLeft, y: titleTop, width: titleWidth });
       const lines = card.querySelectorAll('.card-body-line');
       lines.forEach((line, index) => {
-        line.setAttribute('x', String(textLeft));
+        const lineWidth = Math.round(textWidth * (index === 0 ? 1 : .85));
+        line.setAttribute('x', String(stacked ? 200 - lineWidth / 2 : textLeft));
         line.setAttribute('y', String(titleTop + 32 + index * 22));
-        line.setAttribute('width', String(Math.round(textWidth * (index === 0 ? 1 : .85))));
+        line.setAttribute('width', String(lineWidth));
       });
       const dimensions = card.querySelectorAll('.card-dimensions > path');
-      dimensions[0]?.setAttribute('d', `M${left} 78 V58 M${right} 78 V58 M${left} 68 H${right} M${left - 12} 90 H${left - 32} M${left - 12} 224 H${left - 32} M${left - 22} 90 V224 M${left} 236 V256 M${right} 236 V256 M${left} 246 H${right}`);
-      dimensions[1]?.setAttribute('d', `M${left - 4} 72 l8 -8 M${right - 4} 72 l8 -8 M${left - 26} 94 l8 -8 M${left - 26} 228 l8 -8 M${left - 4} 250 l8 -8 M${right - 4} 250 l8 -8`);
-      set('.card-guides', { d: `M${left + inset + 20} 80 V234 M${textLeft} 80 V234 M${left - 10} ${titleTop + 10} H${right + 10} M${left - 10} ${titleTop + 37} H${right + 10}` });
-      output.value = `${inset}px`;
-      padding.style.setProperty('--range-progress', `${(inset - 8) / 24 * 100}%`);
+      dimensions[0]?.setAttribute('d', `M${left} ${top - 12} V${top - 32} M${right} ${top - 12} V${top - 32} M${left} ${top - 22} H${right} M${left - 12} ${top} H${left - 32} M${left - 12} ${bottom} H${left - 32} M${left - 22} ${top} V${bottom} M${left} ${bottom + 12} V${bottom + 32} M${right} ${bottom + 12} V${bottom + 32} M${left} ${bottom + 22} H${right}`);
+      dimensions[1]?.setAttribute('d', `M${left - 4} ${top - 18} l8 -8 M${right - 4} ${top - 18} l8 -8 M${left - 26} ${top + 4} l8 -8 M${left - 26} ${bottom + 4} l8 -8 M${left - 4} ${bottom + 26} l8 -8 M${right - 4} ${bottom + 26} l8 -8`);
+      set('.card-guides', { d: `M${avatarX} ${top - 10} V${bottom + 10} M${textLeft} ${top - 10} V${bottom + 10} M${left - 10} ${titleTop + 10} H${right + 10} M${left - 10} ${titleTop + 37} H${right + 10}` });
+      const annotations = card.querySelectorAll('.card-annotations text');
+      annotations[0]?.setAttribute('y', String(top - 42));
+      annotations[1]?.setAttribute('y', String(bottom + 50));
+      const description = card.querySelector('#card-description');
+      if (description) description.textContent = `A rounded interface card with a circular avatar ${stacked ? 'above' : 'beside'} a title placeholder and two body text lines, layered with diagonal hatching and drafting guides.`;
     };
-    padding.addEventListener('input', update);
+    spaces.forEach((space) => space.addEventListener('change', update));
     sizes.forEach((size) => size.addEventListener('change', update));
     update();
     controls.hidden = false;
